@@ -141,19 +141,24 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
    aparecer, clara o bastante pra continuar legível se a animação não rodar. */
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
   .palco__meia{
+    /* O degradê REPETE, e as duas pontas são a mesma cor — assim ele ladrilha
+       sem emenda. Com `no-repeat` e a posição saindo do alcance, sobrava área
+       sem fundo nenhum: como o preenchimento da letra é transparente, a letra
+       sumia. Aqui a varredura anda exatamente um ladrilho (0% → 200% com fundo
+       de 200%), então volta ao ponto de partida sem salto e sem buraco. */
     background-image:linear-gradient(100deg,
       #C8B08A 0%, #C8B08A 38%,
-      #FFF6E8 48%, #FFFFFF 50%, #FFF6E8 52%,
+      #FFF6E8 47%, #FFFFFF 50%, #FFF6E8 53%,
       #C8B08A 62%, #C8B08A 100%);
-    background-size:300% 100%;background-repeat:no-repeat;
+    background-size:200% 100%;background-repeat:repeat;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;color:transparent;
-    animation:brilho-titulo 4.5s linear infinite;
+    animation:brilho-titulo 5s linear infinite;
   }
 }
 @keyframes brilho-titulo{
-  from{background-position:150% 0}
-  to{background-position:-50% 0}
+  from{background-position:0 0}
+  to{background-position:200% 0}
 }
 /* Passado o percurso o título já saiu de cena — parar aqui evita repintura
    contínua no resto da página. A classe já é ligada pelo script do hero. */
