@@ -125,9 +125,33 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
 .palco__titulo{position:absolute;inset:0;z-index:3;margin:0;display:grid;place-items:center;pointer-events:none}
 .palco__meia{
   grid-area:1/1;color:var(--cor-texto);white-space:nowrap;
-  font-size:clamp(1.5rem,5.2vw,4.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;
+  font-size:clamp(2.5rem,8.2vw,6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;
   text-shadow:0 2px 30px rgba(0,0,0,.55);will-change:transform;
 }
+/* Brilho varrendo o título: é só um degradê recortado no texto, com a posição
+   do fundo animada — mesmo efeito do componente React de "shiny text", sem
+   nenhum JavaScript. Dentro de @supports porque o preenchimento transparente
+   só pode existir onde o recorte no texto funciona; sem isso o título sumiria.
+   O text-shadow continua sendo pintado a partir do contorno da letra, então a
+   legibilidade sobre a foto não se perde. */
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .palco__meia{
+    background-image:linear-gradient(100deg,
+      #fff 18%, #FFE4BC 38%, #FFF7EA 50%, #FFE4BC 62%, #fff 82%);
+    background-size:250% 100%;background-repeat:no-repeat;
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    animation:brilho-titulo 6s linear infinite;
+  }
+}
+@keyframes brilho-titulo{
+  from{background-position:150% 0}
+  to{background-position:-50% 0}
+}
+/* Passado o percurso o título já saiu de cena — parar aqui evita repintura
+   contínua no resto da página. A classe já é ligada pelo script do hero. */
+.palco--fim .palco__meia{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.palco__meia{animation:none}}
 .palco__meia--esq{transform:translate(calc(var(--p) * var(--saida) * -1),-.62em)}
 .palco__meia--dir{transform:translate(calc(var(--p) * var(--saida)),.62em)}
 .palco__nota{
@@ -157,7 +181,9 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
 @media (max-width:700px){
   .palco{--w0:68vw}
   html.js .palco{height:190vh}
-  .palco__meia{font-size:clamp(1.25rem,5.8vw,1.8rem)}
+  /* No celular o título vinha em ~23px, menor que o corpo de texto de muita
+     página. Aqui ele dobra e continua cabendo numa linha só a 320px. */
+  .palco__meia{font-size:clamp(2rem,11.5vw,3.6rem)}
   .palco__nota{font-size:.8rem}
   .palco__nota--dir{font-size:.74rem}
 }
