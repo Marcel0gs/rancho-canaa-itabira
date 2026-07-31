@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className += " js";</script>
+
+<title>Rancho Canaã Itabira — casa de madeira para fim de semana, festa e ensaio</title>
+<meta name="description" content="Casa de madeira com 4 quartos, piscina, área gourmet e vista de serra em Itabira/MG. Fim de semana em família, festa intimista ou ensaio fotográfico. Agenda 2026 aberta.">
+<link rel="canonical" href="https://marcel0gs.github.io/rancho-canaa-itabira/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rancho Canaã Itabira — seu pedaço de paraíso">
+<meta property="og:description" content="Casa de madeira com 4 quartos, piscina, área gourmet e vista de serra em Itabira/MG.">
+<meta property="og:image" content="https://marcel0gs.github.io/rancho-canaa-itabira/assets/img/aerea-por-do-sol.webp">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preload" as="image" href="assets/img/aerea-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/aerea-por-do-sol.webp" media="(min-width: 701px)" fetchpriority="high">
+
+<style>
+/* ====================== base ====================== */
+:root{
+  --madeira:#7A3E1D;
+  --madeira-claro:#A8632F;
+  --sol:#E08A3C;
+  --mata:#2C3D2A;
+  --noite:#16202B;
+  --creme:#F7F2E9;
+  --papel:#FFFDF9;
+  --texto:#2A241E;
+  --texto-suave:#6B6055;
+  --borda:#E4DACB;
+  --raio:16px;
+  --veu-rgb:22,32,43;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--papel);color:var(--texto);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px;line-height:1.65;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(1.65rem,4.2vw,2.7rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:800}
+p{margin:0 0 1rem}
+a{color:inherit}
+.env{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.secao{padding:clamp(3.5rem,8vw,6rem) 0}
+.secao--creme{background:var(--creme)}
+.olho{
+  display:inline-block;margin-bottom:.7rem;font-size:.78rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--madeira-claro);
+}
+.chamada{max-width:56ch;color:var(--texto-suave);font-size:1.06rem}
+
+/* ====================== botões ====================== */
+.btn{
+  display:inline-block;padding:.85rem 1.6rem;border-radius:999px;
+  background:var(--madeira);color:#fff;font-weight:700;text-decoration:none;
+  border:2px solid var(--madeira);transition:background .18s,border-color .18s,transform .18s;
+}
+.btn:hover{background:var(--madeira-claro);border-color:var(--madeira-claro);transform:translateY(-1px)}
+/* O vazado fica por cima de foto — sobre madeira clara ou tapete branco um
+   botão só de contorno some. Então ele carrega o próprio fundo escurecido,
+   que também funciona nas seções de fundo escuro. */
+.btn--vazado{
+  background:rgba(16,24,33,.5);color:#fff;border-color:rgba(255,255,255,.9);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.btn--vazado:hover{background:rgba(16,24,33,.75);border-color:#fff}
+.btn--escuro{background:transparent;color:var(--madeira);border-color:var(--madeira)}
+.btn--escuro:hover{background:var(--madeira);color:#fff}
+
+/* ====================== hero "palco" ======================
+   Componente templates/componentes/hero-abre-com-scroll.html.
+   Bolhas removidas: não há elemento gráfico de marca aqui. */
+.palco{
+  --cor-fundo:var(--noite);--cor-texto:#fff;--cor-nota:#F2E7D7;--cor-nota2:#CBBBA4;
+  --veu:var(--veu-rgb);
+  --p:0;
+  --w0:clamp(240px,25vw,400px);
+  --h0:min(calc(var(--w0) * 1.34),62vh);
+  --saida:200vw;
+  position:relative;height:min(94vh,760px);
+  background:var(--cor-fundo);color:var(--cor-texto);
+}
+html.js .palco{height:200vh}
+.palco__trilho{position:relative;height:100%;overflow:hidden}
+html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
+.palco__fundo{
+  position:absolute;inset:0;z-index:0;
+  transform:scale(calc(1.08 * (1 - var(--p)) + 1 * var(--p)));
+  will-change:transform;
+}
+.palco__fundo picture{display:block;width:100%;height:100%}
+.palco__fundo img{width:100%;height:100%;object-fit:cover}
+.palco__fundo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(var(--veu),.20) 0%,rgba(var(--veu),.62) 100%);
+  opacity:calc(.85 * (1 - var(--p)) + 1 * var(--p));
+}
+.palco__midia{
+  position:absolute;top:50%;left:50%;z-index:2;
+  display:block;overflow:hidden;transform:translate(-50%,-50%);
+  width:calc(var(--w0) * (1 - var(--p)) + 100% * var(--p));
+  height:calc(var(--h0) * (1 - var(--p)) + 100% * var(--p));
+  border-radius:calc(18px * (1 - var(--p)));
+  box-shadow:0 26px 70px rgba(0,0,0,calc(.55 * (1 - var(--p))));
+  contain:layout paint;
+}
+.palco__midia img{
+  width:100%;height:100%;object-fit:cover;object-position:55% 50%;
+  transform:scale(calc(1.4 * (1 - var(--p)) + 1 * var(--p)));
+  transform-origin:55% 45%;will-change:transform;
+}
+@media (max-width:700px){.palco__midia img{object-position:50% 50%}}
+.palco__midia::after{
+  content:"";position:absolute;inset:0;
+  background:rgba(var(--veu),.5);opacity:calc(1 - var(--p));
+}
+.palco__titulo{position:absolute;inset:0;z-index:3;margin:0;display:grid;place-items:center;pointer-events:none}
+.palco__meia{
+  grid-area:1/1;color:var(--cor-texto);white-space:nowrap;
+  font-size:clamp(1.5rem,5.2vw,4.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;
+  text-shadow:0 2px 30px rgba(0,0,0,.55);will-change:transform;
+}
+.palco__meia--esq{transform:translate(calc(var(--p) * var(--saida) * -1),-.62em)}
+.palco__meia--dir{transform:translate(calc(var(--p) * var(--saida)),.62em)}
+.palco__nota{
+  position:absolute;left:50%;z-index:1;margin:0;
+  top:calc(50% + var(--h0) / 2 + 1.2rem);
+  font-size:.92rem;font-weight:600;color:var(--cor-nota);
+  white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.6);pointer-events:none;
+}
+.palco__nota--esq{transform:translateX(calc(-50% - var(--p) * var(--saida)))}
+.palco__nota--dir{
+  top:calc(50% + var(--h0) / 2 + 3.1rem);font-size:.8rem;color:var(--cor-nota2);
+  transform:translateX(calc(-50% + var(--p) * var(--saida)));
+}
+.palco__final{
+  position:absolute;z-index:4;left:0;right:0;bottom:clamp(2.5rem,9vh,6rem);
+  text-align:center;padding:0 1.25rem;
+  opacity:clamp(0,calc((var(--p) - .72) * 4),1);pointer-events:none;
+}
+.palco--fim .palco__final{pointer-events:auto}
+.palco__final p{margin:0 0 1.1rem;font-weight:700;color:var(--cor-texto);text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.palco__acoes{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+html:not(.js) .palco__midia{width:100%;height:100%;border-radius:0;box-shadow:none}
+html:not(.js) .palco__midia img{transform:none}
+html:not(.js) .palco__midia::after{opacity:.6}
+html:not(.js) .palco__nota{display:none}
+html:not(.js) .palco__final{opacity:1;pointer-events:auto}
+@media (max-width:700px){
+  .palco{--w0:68vw}
+  html.js .palco{height:190vh}
+  .palco__meia{font-size:clamp(1.25rem,5.8vw,1.8rem)}
+  .palco__nota{font-size:.8rem}
+  .palco__nota--dir{font-size:.74rem}
+}
+
+/* ====================== comodidades ====================== */
+.comodidades{
+  display:grid;gap:2.4rem 2.5rem;margin-top:2.8rem;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+.item h3{display:flex;align-items:center;gap:.7rem;font-size:1.12rem;margin-bottom:.45rem}
+.item svg{flex:none;width:24px;height:24px;color:var(--madeira)}
+.item p{margin:0;color:var(--texto-suave);font-size:.97rem}
+
+/* ====================== usos ====================== */
+.usos{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2.5rem}
+.uso{
+  background:var(--papel);border:1px solid var(--borda);border-radius:var(--raio);
+  padding:1.6rem;display:flex;flex-direction:column;
+}
+.uso h3{margin-bottom:.6rem;color:var(--madeira)}
+.uso p{color:var(--texto-suave);font-size:.98rem;flex:1}
+.uso a{
+  align-self:flex-start;margin-top:.5rem;font-weight:800;font-size:.95rem;
+  color:var(--madeira);text-decoration:none;border-bottom:2px solid var(--sol);padding-bottom:2px;
+}
+.uso a:hover{color:var(--madeira-claro)}
+
+/* ====================== galerias ====================== */
+.grade{display:grid;gap:1rem;margin-top:2.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grade figure{margin:0;border-radius:var(--raio);overflow:hidden;background:var(--creme)}
+.grade img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.grade--destaque figure:first-child{grid-column:span 2}
+@media (max-width:640px){.grade--destaque figure:first-child{grid-column:auto}}
+.legenda{
+  margin-top:1.2rem;font-size:.9rem;color:var(--texto-suave);
+  border-left:3px solid var(--sol);padding-left:.9rem;max-width:60ch;
+}
+
+/* ====================== faixa do pôr do sol ====================== */
+.sol{position:relative;color:#fff;text-align:center;isolation:isolate}
+.sol img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  object-position:50% 68%;
+}
+.sol::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(22,32,43,.35),rgba(22,32,43,.75));
+}
+.sol .env{padding:clamp(4rem,12vw,8rem) 0}
+.sol h2{max-width:22ch;margin-inline:auto;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.sol p{max-width:48ch;margin:1.2rem auto 0;color:#F2E7D7;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+
+/* ====================== avaliações ====================== */
+/* bloco da nota: número, estrelas e contagem empilhados, no formato do
+   cartão de avaliação do próprio Google */
+.nota{display:inline-flex;flex-direction:column;align-items:center;gap:.2rem;margin-top:1.6rem}
+.nota b{font-size:clamp(2.8rem,9vw,3.6rem);font-weight:700;line-height:1.05;color:var(--texto)}
+.nota .estrelas{color:#F5B301;font-size:1.15rem;letter-spacing:.14em;line-height:1}
+.nota small{color:var(--texto-suave);font-size:.88rem;margin-top:.35rem}
+.vozes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:2.2rem}
+.voz{
+  margin:0;padding:1.4rem;background:var(--papel);
+  border:1px solid var(--borda);border-radius:var(--raio);
+}
+.voz p{font-size:1rem;margin-bottom:.9rem}
+.voz figcaption{font-size:.85rem;font-weight:700;color:var(--texto-suave)}
+
+/* ====================== leque do instagram ======================
+   Mesmo componente do site da GeP. --passo (distância entre os cards),
+   --card (largura de referência) e --dyf (escala do desnível) governam o
+   leque inteiro: no celular ele só encolhe, nunca vira carrossel. */
+.insta{background:var(--noite);color:#fff;text-align:center;overflow:hidden}
+.insta h2{color:#fff}
+.insta h2 span{color:var(--sol)}
+.insta__chamada{color:#CBBBA4;max-width:46ch;margin:.9rem auto 0}
+.insta__leque{
+  --passo:152px;--card:180px;--dyf:1px;
+  position:relative;z-index:1;height:300px;margin:2.5rem 0 1rem;
+}
+.insta__item{
+  --x:calc(var(--i) * var(--passo));
+  --y:calc(var(--dy) * var(--dyf));
+  display:block;position:absolute;top:50%;left:50%;
+  width:calc(var(--card) * var(--n));aspect-ratio:3/4;overflow:hidden;border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);
+  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.insta__item:hover{
+  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y) - 10px)) rotate(0deg) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,.55);z-index:50 !important;
+}
+.insta__item img{width:100%;height:100%;object-fit:cover;display:block}
+.insta__cta{margin-top:1.5rem;position:relative;z-index:1}
+/* estado inicial (cards recolhidos no centro): só com JS e sem "reduzir
+   movimento". Sem isso os cards já nascem na posição final. */
+.insta__item--entrando{
+  transform:translate(-50%,-50%) rotate(0deg) scale(.85);opacity:0;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s ease;
+}
+.insta__leque--visivel .insta__item--entrando{
+  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r)) scale(1);
+  opacity:1;
+}
+@media (max-width:760px){
+  .insta__leque{--passo:58px;--card:142px;--dyf:.5px;height:250px;margin:2rem 0 .5rem}
+  .insta__item{border-radius:13px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+  /* sem hover em toque: levantar card com o dedo em cima não acontece */
+  .insta__item:hover{
+    transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));
+    box-shadow:0 8px 20px rgba(0,0,0,.45);
+  }
+}
+@media (max-width:400px){.insta__leque{--passo:52px;--card:126px;height:225px}}
+
+/* ====================== agenda / cta ====================== */
+.agenda{background:var(--noite);color:#fff;text-align:center}
+.agenda h2{margin-bottom:1rem}
+.agenda p{color:#CBBBA4;max-width:52ch;margin-inline:auto}
+.agenda .acoes{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:2rem}
+.selo{
+  display:inline-block;margin-bottom:1.2rem;padding:.35rem 1rem;border-radius:999px;
+  background:rgba(224,138,60,.16);border:1px solid rgba(224,138,60,.5);
+  color:var(--sol);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
+}
+
+/* ====================== rodapé ====================== */
+.rodape{background:var(--mata);color:#D9CDB8;padding:clamp(3rem,7vw,4.5rem) 0 2rem;font-size:.95rem}
+.rodape a{color:#fff}
+.rodape h3{color:#fff;margin-bottom:.9rem;font-size:1.05rem}
+.rodape__topo{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.rodape__marca p{color:#C3B8A2;max-width:34ch}
+
+/* linhas de contato com ícone */
+.contatos{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.contatos li{display:flex;align-items:flex-start;gap:.75rem}
+.contatos svg{flex:none;width:22px;height:22px;margin-top:.15rem;color:var(--sol)}
+.contatos a{font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.contatos a:hover{border-bottom-color:#fff}
+.contatos small{display:block;color:#A99C88;font-weight:400;font-size:.85rem;margin-top:.15rem}
+
+/* botões redondos de rede social */
+.redes{display:flex;gap:.7rem;margin-top:1.4rem}
+.redes a{
+  display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+  color:#fff;transition:background .18s,transform .18s,border-color .18s;
+}
+.redes a:hover{background:rgba(255,255,255,.2);border-color:#fff;transform:translateY(-2px)}
+.redes svg{width:20px;height:20px}
+
+/* mapa */
+.mapa{
+  margin-top:.2rem;border-radius:var(--raio);overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.2);
+  aspect-ratio:4/3;
+}
+.mapa iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.9)}
+@media (max-width:700px){.mapa{aspect-ratio:3/2}}
+
+.rodape__base{
+  margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.15);
+  display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between;
+  font-size:.85rem;color:#A99C88;
+}
+
+/* ====================== whatsapp flutuante ====================== */
+.zap{
+  position:fixed;right:1rem;bottom:1rem;z-index:50;
+  display:flex;align-items:center;gap:.55rem;
+  padding:.8rem 1.25rem;border-radius:999px;
+  background:#25D366;color:#0B2E17;font-weight:800;text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.28);
+}
+.zap:hover{background:#1FBE5A}
+@media (max-width:420px){.zap span{display:none}.zap{padding:.9rem}}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="palco">
+  <div class="palco__trilho">
+
+    <div class="palco__fundo">
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/img/aerea-mobile.webp">
+        <img src="assets/img/aerea-por-do-sol.webp" alt="Vista aérea do Rancho Canaã ao pôr do sol: casa de madeira, piscina, gramado e montanhas ao fundo" width="1400" height="1044" fetchpriority="high">
+      </picture>
+    </div>
+
+    <picture class="palco__midia">
+      <source media="(max-width: 700px)" srcset="assets/img/sala-mobile.webp">
+      <img src="assets/img/sala.webp" alt="Sala do chalé com sofá, escada de madeira, mesa de jantar e adega ao fundo" width="1400" height="932">
+    </picture>
+
+    <h1 class="palco__titulo">
+      <span class="palco__meia palco__meia--esq">Seu pedaço</span>
+      <span class="palco__meia palco__meia--dir">de paraíso.</span>
+    </h1>
+
+    <p class="palco__nota palco__nota--esq">Rancho Canaã · Itabira, MG</p>
+    <p class="palco__nota palco__nota--dir">Role para entrar ↓</p>
+
+    <div class="palco__final">
+      <p>Casa de madeira, piscina e o pôr do sol inteiro só pra você</p>
+      <div class="palco__acoes">
+        <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Consultar disponibilidade</a>
+        <a class="btn btn--vazado" href="#a-casa">Ver a casa</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  (function () {
+    var palco = document.querySelector(".palco");
+    if (!palco) return;
+    var topo = 0, curso = 0;
+    function medir() {
+      topo = palco.getBoundingClientRect().top + window.scrollY;
+      curso = palco.offsetHeight - window.innerHeight;
+    }
+    var agendado = false, ultimo = -1;
+    function atualizar() {
+      agendado = false;
+      var p = curso > 0 ? Math.min(1, Math.max(0, (window.scrollY - topo) / curso)) : 0;
+      if (p === ultimo) return;
+      if (p !== 0 && p !== 1 && Math.abs(p - ultimo) < 0.002) return;
+      ultimo = p;
+      palco.style.setProperty("--p", p.toFixed(4));
+      palco.classList.toggle("palco--fim", p > 0.78);
+    }
+    function agendar() { if (!agendado) { agendado = true; requestAnimationFrame(atualizar); } }
+    window.addEventListener("scroll", agendar, { passive: true });
+    window.addEventListener("resize", function () { medir(); agendar(); });
+    medir();
+    atualizar();
+  })();
+</script>
+
+<!-- ============ USOS ============ -->
+<section class="secao" id="usos">
+  <div class="env">
+    <span class="olho">Três jeitos de usar</span>
+    <h2>O rancho muda conforme o motivo de você vir.</h2>
+    <p class="chamada">Tem quem chegue com mala pra três dias. Tem quem chegue de vestido, faça as fotos e vá embora antes de escurecer. O rancho atende os dois — só faz questão de que ninguém perca o pôr do sol.</p>
+
+    <div class="usos">
+      <article class="uso">
+        <h3>Fim de semana</h3>
+        <p>Quatro quartos, cozinha à disposição e nenhum vizinho por perto. Chegar na sexta, acordar com a serra na janela e não ter hora pra nada até domingo.</p>
+        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20reservar%20um%20fim%20de%20semana%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Ver datas livres →</a>
+      </article>
+      <article class="uso">
+        <h3>Festa intimista</h3>
+        <p>Aniversário, bodas, batizado, confraternização de família. Área gourmet coberta com churrasqueira, deck e jardim — do tamanho de quem cabe na mesa, não de salão de eventos.</p>
+        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20fazer%20uma%20festa%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Ver se a data está livre →</a>
+      </article>
+      <article class="uso">
+        <h3>Ensaio fotográfico</h3>
+        <p>Pré-wedding, gestante, família, debutante. Madeira, contraluz e um horizonte sem poste no meio — é por isso que os fotógrafos da região voltam aqui.</p>
+        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20agendar%20um%20ensaio%20fotogr%C3%A1fico%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Agendar sessão →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A CASA ============ -->
+<section class="secao secao--creme" id="a-casa">
+  <div class="env">
+    <span class="olho">A casa</span>
+    <h2>Madeira por dentro e por fora, com pé-direito de chalé.</h2>
+    <p class="chamada">Sala com escada aparente e mezanino, mesa posta pra todo mundo sentar junto, e a varanda do andar de cima olhando a serra. São quatro quartos, um deles suíte, e dois banheiros sociais.</p>
+
+    <div class="grade">
+      <figure>
+        <img src="assets/img/quarto.webp" alt="Quarto com cama de casal, cabeceira estofada e janela de madeira aberta para a mata" width="859" height="1130" loading="lazy">
+      </figure>
+      <figure>
+        <img src="assets/img/sala.webp" alt="Sala do chalé com teto de madeira, escada aparente e mesa de jantar" width="1400" height="932" loading="lazy">
+      </figure>
+      <figure>
+        <img src="assets/img/fachada.webp" alt="Casa de madeira de dois andares vista de fora, com varanda no andar superior" width="1200" height="551" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÁREA EXTERNA ============ -->
+<section class="secao" id="area-externa">
+  <div class="env">
+    <span class="olho">Do lado de fora</span>
+    <h2>Piscina, deck e churrasqueira — o dia inteiro acontece aqui.</h2>
+    <p class="chamada">A casa é onde se dorme. O rancho de verdade é o que tem em volta dela: piscina com deck de pedra e guarda-sol, área gourmet coberta com churrasqueira e bancada, e um deck de madeira com cadeira de balanço virado pra mata.</p>
+
+    <div class="grade">
+      <figure>
+        <img src="assets/img/gramado-piscina.webp" alt="Gramado do rancho com piscina, deck de pedra e vista aberta para as montanhas" width="1200" height="551" loading="lazy">
+      </figure>
+      <figure>
+        <img src="assets/img/piscina.webp" alt="Piscina retangular com cascata, deck de pedra, guarda-sol e mesa com cadeiras de madeira" width="640" height="673" loading="lazy">
+      </figure>
+      <figure>
+        <img src="assets/img/deck-espreguicadeiras.webp" alt="Espreguiçadeiras de madeira ao lado da piscina, voltadas para o pôr do sol" width="640" height="800" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMODIDADES ============ -->
+<section class="secao secao--creme" id="estrutura">
+  <div class="env">
+    <span class="olho">O que tem lá</span>
+    <h2>Estrutura pronta pra você não precisar levar nada.</h2>
+
+    <div class="comodidades">
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6"/><path d="M2 18h20"/><path d="M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><path d="M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
+          4 quartos
+        </h3>
+        <p>Sendo uma suíte, mais dois banheiros sociais. Cabe a família inteira e ainda sobra cama.</p>
+      </article>
+
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c1.5 0 1.5 1.2 3 1.2s1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2"/><path d="M2 20c1.5 0 1.5 1.2 3 1.2s1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2"/><path d="M7 15V6a2 2 0 0 1 4 0"/><path d="M17 15V6a2 2 0 0 0-4 0"/><path d="M7 9h4"/></svg>
+          Piscina
+        </h3>
+        <p>Com cascata, deck de pedra, guarda-sol e espreguiçadeiras viradas pro pôr do sol.</p>
+      </article>
+
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.2 2.7 4 2.7 5.4 0 1.6-1.2 2.4-2.2 3.4"/><path d="M8.5 21a5.5 5.5 0 0 1-2.4-6.8C6.9 12 8.6 10.6 10 9.4"/><path d="M15.5 21a5.5 5.5 0 0 0 2.4-6.8"/><path d="M6 21h12"/></svg>
+          Área gourmet
+        </h3>
+        <p>Coberta, com churrasqueira e bancada. Chova ou faça sol, o churrasco de domingo sai.</p>
+      </article>
+
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 9.5V17"/><path d="M19 9.5V17"/><path d="M4 17h16"/><path d="M9 17v4"/><path d="M15 17v4"/><path d="M9 13h6"/></svg>
+          Mirante de madeira
+        </h3>
+        <p>Deck suspenso e coberto, com escada própria, virado pro vale. É de lá que se vê o dia acabar.</p>
+      </article>
+
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"/><path d="M4 17v-4.2a2 2 0 0 1 .2-.9l1.9-3.6A2 2 0 0 1 7.9 7h8.2a2 2 0 0 1 1.8 1.1l1.9 3.6c.1.3.2.6.2.9V17"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M4.5 12.5h15"/></svg>
+          Estacionamento
+        </h3>
+        <p>Garagem coberta ao lado da casa e espaço de sobra no gramado pra quem vier em mais carros.</p>
+      </article>
+
+      <article class="item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20"/><path d="M3 19l6.5-10 4 6 2.5-3.5L21 19"/><circle cx="17.5" cy="6" r="2"/></svg>
+          Vista e silêncio
+        </h3>
+        <p>O rancho fica na parte alta, sem vizinho na frente e sem morro tampando o horizonte.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÔR DO SOL ============ -->
+<section class="sol">
+  <img src="assets/img/pergolado-por-do-sol.webp" alt="Sol se pondo atrás das montanhas, visto de baixo do pergolado de madeira ao lado da piscina" width="1200" height="774" loading="lazy">
+  <div class="env">
+    <h2>Todo dia tem um, e ele é sempre a melhor parte.</h2>
+    <p>O rancho fica na parte alta, virado pro horizonte. Não tem prédio, não tem morro na frente. Por volta das seis, todo mundo para o que está fazendo e vai olhar.</p>
+  </div>
+</section>
+
+<!-- ============ AVALIAÇÕES ============ -->
+<section class="secao secao--creme" id="avaliacoes">
+  <div class="env">
+    <span class="olho">Avaliações</span>
+    <h2>Quem já veio conta a mesma história.</h2>
+    <p class="chamada">As avaliações repetem sempre as mesmas coisas: a vista, o silêncio e o aconchego da casa de madeira. Logo depois vem o elogio aos donos — “atenciosos” aparece quase tanto quanto “aconchegante”.</p>
+
+    <div class="nota">
+      <b>4,9</b>
+      <span class="estrelas" aria-hidden="true">★★★★★</span>
+      <small>29 avaliações no Google</small>
+    </div>
+
+    <div class="vozes">
+      <figure class="voz">
+        <p>“Chalé com ótima infraestrutura, ambiente aconchegante e extremamente tranquilo. Ideal para descansar, ter contato com a natureza e recarregar as energias.”</p>
+        <figcaption>Alexandre F.</figcaption>
+      </figure>
+      <figure class="voz">
+        <p>“Perfeito para quem quer descansar. Além de lindo, é aconchegante e traz uma verdadeira sensação de paz.”</p>
+        <figcaption>Júlia R.</figcaption>
+      </figure>
+      <figure class="voz">
+        <p>“Que lugar maravilhoso. Proprietários super educados e atenciosos. Hiper recomendo.”</p>
+        <figcaption>Nélio A.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="insta secao" id="instagram">
+  <div class="env">
+    <span class="olho">No dia a dia</span>
+    <h2>O rancho está no <span>Instagram</span>.</h2>
+    <p class="insta__chamada">É lá que saem as fotos novas, os pôr do sol da semana e os ensaios feitos aqui.</p>
+
+    <!-- Cada card informa só o índice (--i), o desnível (--dy), a rotação e o
+         tamanho relativo (--n). Distância e tamanho base vivem no CSS. -->
+    <div class="insta__leque">
+      <a class="insta__item" style="--i:-2.5;--dy:18;--r:-4deg;--n:.84;z-index:10" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-1.webp" alt="Publicação do Instagram do Rancho Canaã: a casa de madeira ao entardecer" width="540" height="720" loading="lazy" decoding="async"></a>
+      <a class="insta__item" style="--i:-1.5;--dy:38;--r:-3deg;--n:.89;z-index:20" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-2.webp" alt="Publicação do Instagram do Rancho Canaã: a sala de madeira" width="540" height="720" loading="lazy" decoding="async"></a>
+      <a class="insta__item" style="--i:-.5;--dy:4;--r:-2deg;--n:1;z-index:40" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-3.webp" alt="Publicação do Instagram do Rancho Canaã: balanço contra o sol se pondo" width="540" height="720" loading="lazy" decoding="async"></a>
+      <a class="insta__item" style="--i:.5;--dy:26;--r:2deg;--n:1;z-index:40" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-4.webp" alt="Publicação do Instagram do Rancho Canaã: a piscina com guarda-sol" width="540" height="720" loading="lazy" decoding="async"></a>
+      <a class="insta__item" style="--i:1.5;--dy:46;--r:3deg;--n:.89;z-index:20" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-5.webp" alt="Publicação do Instagram do Rancho Canaã: espreguiçadeiras no fim da tarde" width="540" height="720" loading="lazy" decoding="async"></a>
+      <a class="insta__item" style="--i:2.5;--dy:12;--r:4deg;--n:.84;z-index:10" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-6.webp" alt="Publicação do Instagram do Rancho Canaã: a sala vista do mezanino" width="540" height="720" loading="lazy" decoding="async"></a>
+    </div>
+
+    <div class="insta__cta">
+      <a class="btn btn--vazado" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // O leque entra em posição quando a seção aparece na tela, não no
+  // carregamento — ela fica no fim da página. Sem JS ou com "reduzir
+  // movimento", os cards já nascem posicionados: a classe é só reforço.
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    document.querySelectorAll(".insta__leque .insta__item").forEach(function (item, i) {
+      item.classList.add("insta__item--entrando");
+      item.style.transitionDelay = (i * 0.09) + "s";
+    });
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("insta__leque--visivel"); obs.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    obs.observe(document.querySelector(".insta__leque"));
+  }
+</script>
+
+<!-- ============ AGENDA ============ -->
+<section class="agenda secao" id="reservar">
+  <div class="env">
+    <span class="selo">Agenda 2026 aberta</span>
+    <h2>Feriado e alta temporada fecham primeiro.</h2>
+    <p>Quem já veio costuma remarcar na saída. Manda a data que você tem em mente e a gente confere na hora se ainda está livre — a reserva é combinada direto no WhatsApp, sem formulário e sem cadastro.</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20consultar%20uma%20data." target="_blank" rel="noopener">Consultar uma data</a>
+      <a class="btn btn--vazado" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">Ver o Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="rodape" id="contato">
+  <div class="env">
+    <div class="rodape__topo">
+
+      <div class="rodape__marca">
+        <h3>Rancho Canaã</h3>
+        <p>Casa de madeira para fim de semana, festa intimista e ensaio fotográfico, na parte alta de Itabira — Minas Gerais.</p>
+        <div class="redes">
+          <a href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener" aria-label="WhatsApp do Rancho Canaã">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.19.87 2.35.99 2.51.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener" aria-label="Instagram do Rancho Canaã">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener" aria-label="Rancho Canaã no Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Falar com a gente</h3>
+        <ul class="contatos">
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+            <span>
+              <a href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">(31) 99135-1079</a>
+              <small>WhatsApp — reservas e dúvidas</small>
+            </span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+            <span>
+              <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
+              <small>Fotos novas e datas livres</small>
+            </span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
+            <span>
+              <a href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">Como chegar</a>
+              <small>Itabira — MG · abre a rota no Google Maps</small>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Onde fica</h3>
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps?q=-19.6794164,-43.3338004&z=15&output=embed"
+            title="Mapa com a localização do Rancho Canaã em Itabira, MG"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rodape__base">
+      <span>© 2026 Rancho Canaã Itabira. Todos os direitos reservados.</span>
+      <span>4,9 ★ em 29 avaliações no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.19.87 2.35.99 2.51.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>
