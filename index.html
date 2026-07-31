@@ -133,15 +133,22 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
    nenhum JavaScript. Dentro de @supports porque o preenchimento transparente
    só pode existir onde o recorte no texto funciona; sem isso o título sumiria.
    O text-shadow continua sendo pintado a partir do contorno da letra, então a
-   legibilidade sobre a foto não se perde. */
+   legibilidade sobre a foto não se perde.
+
+   Diferença em relação à referência: lá o texto está sobre preto liso e a base
+   pode ser cinza-escura, o que faz a faixa clara saltar. Aqui ele está sobre
+   foto, então a base é um creme quente — apagada o bastante pra faixa branca
+   aparecer, clara o bastante pra continuar legível se a animação não rodar. */
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
   .palco__meia{
     background-image:linear-gradient(100deg,
-      #fff 18%, #FFE4BC 38%, #FFF7EA 50%, #FFE4BC 62%, #fff 82%);
-    background-size:250% 100%;background-repeat:no-repeat;
+      #C8B08A 0%, #C8B08A 38%,
+      #FFF6E8 48%, #FFFFFF 50%, #FFF6E8 52%,
+      #C8B08A 62%, #C8B08A 100%);
+    background-size:300% 100%;background-repeat:no-repeat;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;color:transparent;
-    animation:brilho-titulo 6s linear infinite;
+    animation:brilho-titulo 4.5s linear infinite;
   }
 }
 @keyframes brilho-titulo{
@@ -151,7 +158,14 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
 /* Passado o percurso o título já saiu de cena — parar aqui evita repintura
    contínua no resto da página. A classe já é ligada pelo script do hero. */
 .palco--fim .palco__meia{animation-play-state:paused}
-@media (prefers-reduced-motion: reduce){.palco__meia{animation:none}}
+/* Sem animação a base apagada não faz sentido — o título volta a ser branco
+   sólido, que é a versão legível de sempre. */
+@media (prefers-reduced-motion: reduce){
+  .palco__meia{
+    animation:none;background-image:none;
+    -webkit-text-fill-color:#fff;color:#fff;
+  }
+}
 .palco__meia--esq{transform:translate(calc(var(--p) * var(--saida) * -1),-.62em)}
 .palco__meia--dir{transform:translate(calc(var(--p) * var(--saida)),.62em)}
 .palco__nota{
