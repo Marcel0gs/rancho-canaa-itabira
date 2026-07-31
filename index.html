@@ -63,15 +63,15 @@ a{color:inherit}
   border:2px solid var(--madeira);transition:background .18s,border-color .18s,transform .18s;
 }
 .btn:hover{background:var(--madeira-claro);border-color:var(--madeira-claro);transform:translateY(-1px)}
-/* O vazado fica por cima de foto — sobre madeira clara ou tapete branco um
-   botão só de contorno some. Então ele carrega o próprio fundo escurecido,
-   que também funciona nas seções de fundo escuro. */
-.btn--vazado{
-  background:rgba(16,24,33,.5);color:#fff;border-color:rgba(255,255,255,.9);
-  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-  text-shadow:0 1px 8px rgba(0,0,0,.5);
+/* O secundário fica por cima de foto. Contorno vazado sumia sobre madeira
+   clara; fundo escuro translúcido virava um cinza sem contraste sobre o mesmo
+   lugar. Sólido branco com texto escuro é o único que não depende do que tem
+   atrás — e sobre os fundos escuros das outras seções ele também salta. */
+.btn--claro{
+  background:#fff;color:var(--madeira);border-color:#fff;
+  text-shadow:none;
 }
-.btn--vazado:hover{background:rgba(16,24,33,.75);border-color:#fff}
+.btn--claro:hover{background:var(--creme);border-color:var(--creme);color:var(--madeira)}
 .btn--escuro{background:transparent;color:var(--madeira);border-color:var(--madeira)}
 .btn--escuro:hover{background:var(--madeira);color:#fff}
 
@@ -122,6 +122,19 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
   content:"";position:absolute;inset:0;
   background:rgba(var(--veu),.5);opacity:calc(1 - var(--p));
 }
+/* Sombra no rodapé do palco. No fim do percurso o véu sobre o card já chegou
+   a zero — a foto fica limpa, e é justamente onde entram a frase e os botões.
+   Sobre assoalho claro ou tapete branco o texto perdia contraste. Este degradê
+   entra junto com o bloco final e só na faixa de baixo, então não suja a foto
+   nem atrapalha a abertura. */
+.palco__trilho::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:52%;z-index:3;
+  pointer-events:none;
+  background:linear-gradient(to top,
+    rgba(var(--veu),.92) 0%, rgba(var(--veu),.6) 42%, rgba(var(--veu),0) 100%);
+  opacity:clamp(0,calc((var(--p) - .62) * 3.2),1);
+}
+html:not(.js) .palco__trilho::after{opacity:1}
 .palco__titulo{position:absolute;inset:0;z-index:3;margin:0;display:grid;place-items:center;pointer-events:none}
 .palco__meia{
   grid-area:1/1;color:var(--cor-texto);white-space:nowrap;
@@ -415,7 +428,7 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
       <p>Casa de madeira, piscina e o pôr do sol inteiro só pra você</p>
       <div class="palco__acoes">
         <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Consultar disponibilidade</a>
-        <a class="btn btn--vazado" href="#a-casa">Ver a casa</a>
+        <a class="btn btn--claro" href="#a-casa">Ver a casa</a>
       </div>
     </div>
 
@@ -634,7 +647,7 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
     </div>
 
     <div class="insta__cta">
-      <a class="btn btn--vazado" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
+      <a class="btn btn--claro" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
     </div>
   </div>
 </section>
@@ -665,7 +678,7 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
     <p>Quem já veio costuma remarcar na saída. Manda a data que você tem em mente e a gente confere na hora se ainda está livre — a reserva é combinada direto no WhatsApp, sem formulário e sem cadastro.</p>
     <div class="acoes">
       <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20consultar%20uma%20data." target="_blank" rel="noopener">Consultar uma data</a>
-      <a class="btn btn--vazado" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">Ver o Instagram</a>
+      <a class="btn btn--claro" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">Ver o Instagram</a>
     </div>
   </div>
 </section>
