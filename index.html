@@ -153,12 +153,16 @@ html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
     background-size:200% 100%;background-repeat:repeat;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;color:transparent;
-    animation:brilho-titulo 5s linear infinite;
+    /* Vai da esquerda pra direita, encosta no fim e volta de ré: `alternate`
+       reproduz o mesmo percurso ao contrário. A curva suave nas duas pontas
+       faz a luz sair devagar, ganhar corpo no meio e desacelerar até parar
+       antes de virar — sem o solavanco que `linear` daria na virada. */
+    animation:brilho-titulo 3.2s cubic-bezier(.45,0,.55,1) infinite alternate;
   }
 }
 @keyframes brilho-titulo{
-  from{background-position:0 0}
-  to{background-position:200% 0}
+  from{background-position:200% 0}
+  to{background-position:0 0}
 }
 /* Passado o percurso o título já saiu de cena — parar aqui evita repintura
    contínua no resto da página. A classe já é ligada pelo script do hero. */
