@@ -166,11 +166,12 @@ html:not(.js) .palco__trilho::after{opacity:1}
     background-size:200% 100%;background-repeat:repeat;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;color:transparent;
-    /* Vai da esquerda pra direita, encosta no fim e volta de ré: `alternate`
-       reproduz o mesmo percurso ao contrário. A curva suave nas duas pontas
-       faz a luz sair devagar, ganhar corpo no meio e desacelerar até parar
-       antes de virar — sem o solavanco que `linear` daria na virada. */
-    animation:brilho-titulo 3.2s cubic-bezier(.45,0,.55,1) infinite alternate;
+    /* Só de ida: a luz sai suave da esquerda, ganha velocidade e, ao chegar no
+       fim, volta ao começo no mesmo instante. Sem `alternate`, que faria ela
+       desandar de ré. `ease-in` é o que dá a saída macia e a chegada rápida;
+       e como o percurso é de exatamente um ladrilho, o ponto de retorno desenha
+       igual ao de partida — o salto não tem como aparecer. */
+    animation:brilho-titulo 3.5s ease-in infinite;
   }
 }
 @keyframes brilho-titulo{
@@ -373,12 +374,25 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
 
 /* mapa */
 .mapa{
-  margin-top:.2rem;border-radius:var(--raio);overflow:hidden;
+  border-radius:var(--raio);overflow:hidden;
   border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.2);
   aspect-ratio:4/3;
 }
 .mapa iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.9)}
 @media (max-width:700px){.mapa{aspect-ratio:3/2}}
+/* O mapa incorporado abre a ficha por coordenada, não a página do rancho no
+   Google. Quem quer ver avaliação, foto e rota precisa de um caminho direto
+   pro perfil — daí o botão logo abaixo, e não só o pin. */
+/* A cor precisa vir por `.rodape ...`: a regra `.rodape a{color:#fff}` tem
+   especificidade maior que `.btn--claro` sozinha e pintava o texto de branco
+   sobre o botão branco — sumia por completo. */
+.rodape .mapa__ir{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  margin-top:.9rem;width:100%;padding:.7rem 1.1rem;font-size:.95rem;
+  color:var(--madeira);
+}
+.rodape .mapa__ir:hover{color:var(--madeira)}
+.mapa__ir svg{width:18px;height:18px;flex:none}
 
 .rodape__base{
   margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.15);
@@ -735,10 +749,14 @@ html:not(.js) .palco__final{opacity:1;pointer-events:auto}
         <h3>Onde fica</h3>
         <div class="mapa">
           <iframe
-            src="https://www.google.com/maps?q=-19.6794164,-43.3338004&z=15&output=embed"
+            src="https://www.google.com/maps?q=-19.6794164,-43.3338004(Rancho+Cana%C3%A3)&z=15&output=embed"
             title="Mapa com a localização do Rancho Canaã em Itabira, MG"
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <a class="btn btn--claro mapa__ir" href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
+          Abrir no Google Maps
+        </a>
       </div>
 
     </div>
