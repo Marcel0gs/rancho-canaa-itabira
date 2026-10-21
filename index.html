@@ -3,775 +3,614 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.className += " js";</script>
-
-<title>Rancho Canaã Itabira — casa de madeira para fim de semana, festa e ensaio</title>
-<meta name="description" content="Casa de madeira com 4 quartos, piscina, área gourmet e vista de serra em Itabira/MG. Fim de semana em família, festa intimista ou ensaio fotográfico. Agenda 2026 aberta.">
+<title>Rancho Canaã Itabira | Casamentos, fim de semana e ensaios fotográficos</title>
+<meta name="description" content="Chalé de madeira com piscina e vista pra serra em Itabira/MG. Casamentos ao ar livre no pôr do sol, fins de semana em família e ensaios fotográficos. Consulte as datas pelo WhatsApp.">
 <link rel="canonical" href="https://marcel0gs.github.io/rancho-canaa-itabira/">
-
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rancho Canaã Itabira — seu pedaço de paraíso">
-<meta property="og:description" content="Casa de madeira com 4 quartos, piscina, área gourmet e vista de serra em Itabira/MG.">
-<meta property="og:image" content="https://marcel0gs.github.io/rancho-canaa-itabira/assets/img/aerea-por-do-sol.webp">
+<meta property="og:title" content="Rancho Canaã Itabira, seu pedaço de paraíso">
+<meta property="og:description" content="Casamentos ao ar livre, fins de semana num chalé de madeira e ensaios na luz dourada do fim de tarde.">
+<meta property="og:image" content="https://marcel0gs.github.io/rancho-canaa-itabira/assets/img/og-rancho.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://marcel0gs.github.io/rancho-canaa-itabira/">
 <meta property="og:locale" content="pt_BR">
-
-<link rel="preload" as="image" href="assets/img/aerea-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/img/aerea-por-do-sol.webp" media="(min-width: 701px)" fetchpriority="high">
-
-<style>
-/* ====================== base ====================== */
-:root{
-  --madeira:#7A3E1D;
-  --madeira-claro:#A8632F;
-  --sol:#E08A3C;
-  --mata:#2C3D2A;
-  --noite:#16202B;
-  --creme:#F7F2E9;
-  --papel:#FFFDF9;
-  --texto:#2A241E;
-  --texto-suave:#6B6055;
-  --borda:#E4DACB;
-  --raio:16px;
-  --veu-rgb:22,32,43;
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#141B22">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/aerea-1920.webp" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/aerea-m.webp" media="(max-width: 699px)" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+  /* Síncrono de propósito: a classe js e a decisão da abertura precisam
+     existir antes da primeira pintura. A abertura só roda uma vez por sessão
+     e nunca com "reduzir movimento". Se o site.js não carregar, a página se
+     libera sozinha em 6 s. */
+  (function (d) {
+    d.classList.add('js');
+    try {
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !sessionStorage.getItem('intro-rancho')) d.classList.add('com-intro');
+    } catch (e) {}
+    setTimeout(function () { d.classList.add('pronto'); d.classList.remove('com-intro'); }, 6000);
+  })(document.documentElement);
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LodgingBusiness", "EventVenue"],
+  "name": "Rancho Canaã Itabira",
+  "description": "Chalé de madeira com 4 quartos, piscina com cascata, área gourmet e vista pra serra. Casamentos ao ar livre, fins de semana e ensaios fotográficos em Itabira/MG.",
+  "url": "https://marcel0gs.github.io/rancho-canaa-itabira/",
+  "image": "https://marcel0gs.github.io/rancho-canaa-itabira/assets/img/og-rancho.jpg",
+  "telephone": "+55 31 99135-1079",
+  "address": { "@type": "PostalAddress", "addressLocality": "Itabira", "addressRegion": "MG", "postalCode": "35935-000", "addressCountry": "BR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": -19.6794164, "longitude": -43.3338004 },
+  "sameAs": ["https://www.instagram.com/ranchocanaaitabira/"]
 }
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--papel);color:var(--texto);
-  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  font-size:17px;line-height:1.65;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
-h2{font-size:clamp(1.65rem,4.2vw,2.7rem);font-weight:800}
-h3{font-size:1.15rem;font-weight:800}
-p{margin:0 0 1rem}
-a{color:inherit}
-.env{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-.secao{padding:clamp(3.5rem,8vw,6rem) 0}
-.secao--creme{background:var(--creme)}
-.olho{
-  display:inline-block;margin-bottom:.7rem;font-size:.78rem;font-weight:800;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--madeira-claro);
-}
-.chamada{max-width:56ch;color:var(--texto-suave);font-size:1.06rem}
-
-/* ====================== botões ====================== */
-.btn{
-  display:inline-block;padding:.85rem 1.6rem;border-radius:999px;
-  background:var(--madeira);color:#fff;font-weight:700;text-decoration:none;
-  border:2px solid var(--madeira);transition:background .18s,border-color .18s,transform .18s;
-}
-.btn:hover{background:var(--madeira-claro);border-color:var(--madeira-claro);transform:translateY(-1px)}
-/* O secundário fica por cima de foto. Contorno vazado sumia sobre madeira
-   clara; fundo escuro translúcido virava um cinza sem contraste sobre o mesmo
-   lugar. Sólido branco com texto escuro é o único que não depende do que tem
-   atrás — e sobre os fundos escuros das outras seções ele também salta. */
-.btn--claro{
-  background:#fff;color:var(--madeira);border-color:#fff;
-  text-shadow:none;
-}
-.btn--claro:hover{background:var(--creme);border-color:var(--creme);color:var(--madeira)}
-.btn--escuro{background:transparent;color:var(--madeira);border-color:var(--madeira)}
-.btn--escuro:hover{background:var(--madeira);color:#fff}
-
-/* ====================== hero "palco" ======================
-   Componente templates/componentes/hero-abre-com-scroll.html.
-   Bolhas removidas: não há elemento gráfico de marca aqui. */
-.palco{
-  --cor-fundo:var(--noite);--cor-texto:#fff;--cor-nota:#F2E7D7;--cor-nota2:#CBBBA4;
-  --veu:var(--veu-rgb);
-  --p:0;
-  --w0:clamp(240px,25vw,400px);
-  --h0:min(calc(var(--w0) * 1.34),62vh);
-  --saida:200vw;
-  position:relative;height:min(94vh,760px);
-  background:var(--cor-fundo);color:var(--cor-texto);
-}
-html.js .palco{height:200vh}
-.palco__trilho{position:relative;height:100%;overflow:hidden}
-html.js .palco .palco__trilho{position:sticky;top:0;height:100vh}
-.palco__fundo{
-  position:absolute;inset:0;z-index:0;
-  transform:scale(calc(1.08 * (1 - var(--p)) + 1 * var(--p)));
-  will-change:transform;
-}
-.palco__fundo picture{display:block;width:100%;height:100%}
-.palco__fundo img{width:100%;height:100%;object-fit:cover}
-.palco__fundo::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(var(--veu),.20) 0%,rgba(var(--veu),.62) 100%);
-  opacity:calc(.85 * (1 - var(--p)) + 1 * var(--p));
-}
-.palco__midia{
-  position:absolute;top:50%;left:50%;z-index:2;
-  display:block;overflow:hidden;transform:translate(-50%,-50%);
-  width:calc(var(--w0) * (1 - var(--p)) + 100% * var(--p));
-  height:calc(var(--h0) * (1 - var(--p)) + 100% * var(--p));
-  border-radius:calc(18px * (1 - var(--p)));
-  box-shadow:0 26px 70px rgba(0,0,0,calc(.55 * (1 - var(--p))));
-  contain:layout paint;
-}
-.palco__midia img{
-  width:100%;height:100%;object-fit:cover;object-position:55% 50%;
-  transform:scale(calc(1.4 * (1 - var(--p)) + 1 * var(--p)));
-  transform-origin:55% 45%;will-change:transform;
-}
-@media (max-width:700px){.palco__midia img{object-position:50% 50%}}
-.palco__midia::after{
-  content:"";position:absolute;inset:0;
-  background:rgba(var(--veu),.5);opacity:calc(1 - var(--p));
-}
-/* Sombra no rodapé do palco. No fim do percurso o véu sobre o card já chegou
-   a zero — a foto fica limpa, e é justamente onde entram a frase e os botões.
-   Sobre assoalho claro ou tapete branco o texto perdia contraste. Este degradê
-   entra junto com o bloco final e só na faixa de baixo, então não suja a foto
-   nem atrapalha a abertura. */
-.palco__trilho::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:52%;z-index:3;
-  pointer-events:none;
-  background:linear-gradient(to top,
-    rgba(var(--veu),.92) 0%, rgba(var(--veu),.6) 42%, rgba(var(--veu),0) 100%);
-  opacity:clamp(0,calc((var(--p) - .62) * 3.2),1);
-}
-html:not(.js) .palco__trilho::after{opacity:1}
-.palco__titulo{position:absolute;inset:0;z-index:3;margin:0;display:grid;place-items:center;pointer-events:none}
-.palco__meia{
-  grid-area:1/1;color:var(--cor-texto);white-space:nowrap;
-  font-size:clamp(2.5rem,8.2vw,6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;
-  text-shadow:0 2px 30px rgba(0,0,0,.55);will-change:transform;
-}
-/* Brilho varrendo o título: é só um degradê recortado no texto, com a posição
-   do fundo animada — mesmo efeito do componente React de "shiny text", sem
-   nenhum JavaScript. Dentro de @supports porque o preenchimento transparente
-   só pode existir onde o recorte no texto funciona; sem isso o título sumiria.
-   O text-shadow continua sendo pintado a partir do contorno da letra, então a
-   legibilidade sobre a foto não se perde.
-
-   Diferença em relação à referência: lá o texto está sobre preto liso e a base
-   pode ser cinza-escura, o que faz a faixa clara saltar. Aqui ele está sobre
-   foto, então a base é um creme quente — apagada o bastante pra faixa branca
-   aparecer, clara o bastante pra continuar legível se a animação não rodar. */
-@supports ((-webkit-background-clip:text) or (background-clip:text)){
-  .palco__meia{
-    /* O degradê REPETE, e as duas pontas são a mesma cor — assim ele ladrilha
-       sem emenda. Com `no-repeat` e a posição saindo do alcance, sobrava área
-       sem fundo nenhum: como o preenchimento da letra é transparente, a letra
-       sumia. Aqui a varredura anda exatamente um ladrilho (0% → 200% com fundo
-       de 200%), então volta ao ponto de partida sem salto e sem buraco. */
-    background-image:linear-gradient(100deg,
-      #C8B08A 0%, #C8B08A 38%,
-      #FFF6E8 47%, #FFFFFF 50%, #FFF6E8 53%,
-      #C8B08A 62%, #C8B08A 100%);
-    background-size:200% 100%;background-repeat:repeat;
-    -webkit-background-clip:text;background-clip:text;
-    -webkit-text-fill-color:transparent;color:transparent;
-    /* Só de ida: a luz sai suave da esquerda, ganha velocidade e, ao chegar no
-       fim, volta ao começo no mesmo instante. Sem `alternate`, que faria ela
-       desandar de ré. `ease-in` é o que dá a saída macia e a chegada rápida;
-       e como o percurso é de exatamente um ladrilho, o ponto de retorno desenha
-       igual ao de partida — o salto não tem como aparecer. */
-    animation:brilho-titulo 3.5s ease-in infinite;
-  }
-}
-@keyframes brilho-titulo{
-  from{background-position:200% 0}
-  to{background-position:0 0}
-}
-/* Passado o percurso o título já saiu de cena — parar aqui evita repintura
-   contínua no resto da página. A classe já é ligada pelo script do hero. */
-.palco--fim .palco__meia{animation-play-state:paused}
-/* Sem animação a base apagada não faz sentido — o título volta a ser branco
-   sólido, que é a versão legível de sempre. */
-@media (prefers-reduced-motion: reduce){
-  .palco__meia{
-    animation:none;background-image:none;
-    -webkit-text-fill-color:#fff;color:#fff;
-  }
-}
-.palco__meia--esq{transform:translate(calc(var(--p) * var(--saida) * -1),-.62em)}
-.palco__meia--dir{transform:translate(calc(var(--p) * var(--saida)),.62em)}
-.palco__nota{
-  position:absolute;left:50%;z-index:1;margin:0;
-  top:calc(50% + var(--h0) / 2 + 1.2rem);
-  font-size:.92rem;font-weight:600;color:var(--cor-nota);
-  white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.6);pointer-events:none;
-}
-.palco__nota--esq{transform:translateX(calc(-50% - var(--p) * var(--saida)))}
-.palco__nota--dir{
-  top:calc(50% + var(--h0) / 2 + 3.1rem);font-size:.8rem;color:var(--cor-nota2);
-  transform:translateX(calc(-50% + var(--p) * var(--saida)));
-}
-.palco__final{
-  position:absolute;z-index:4;left:0;right:0;bottom:clamp(2.5rem,9vh,6rem);
-  text-align:center;padding:0 1.25rem;
-  opacity:clamp(0,calc((var(--p) - .72) * 4),1);pointer-events:none;
-}
-.palco--fim .palco__final{pointer-events:auto}
-.palco__final p{margin:0 0 1.1rem;font-weight:700;color:var(--cor-texto);text-shadow:0 2px 18px rgba(0,0,0,.55)}
-.palco__acoes{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
-html:not(.js) .palco__midia{width:100%;height:100%;border-radius:0;box-shadow:none}
-html:not(.js) .palco__midia img{transform:none}
-html:not(.js) .palco__midia::after{opacity:.6}
-html:not(.js) .palco__nota{display:none}
-html:not(.js) .palco__final{opacity:1;pointer-events:auto}
-@media (max-width:700px){
-  .palco{--w0:68vw}
-  html.js .palco{height:190vh}
-  /* No celular o título vinha em ~23px, menor que o corpo de texto de muita
-     página. Aqui ele dobra e continua cabendo numa linha só a 320px. */
-  .palco__meia{font-size:clamp(2rem,11.5vw,3.6rem)}
-  .palco__nota{font-size:.8rem}
-  .palco__nota--dir{font-size:.74rem}
-}
-
-/* ====================== comodidades ====================== */
-.comodidades{
-  display:grid;gap:2.4rem 2.5rem;margin-top:2.8rem;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-}
-.item h3{display:flex;align-items:center;gap:.7rem;font-size:1.12rem;margin-bottom:.45rem}
-.item svg{flex:none;width:24px;height:24px;color:var(--madeira)}
-.item p{margin:0;color:var(--texto-suave);font-size:.97rem}
-
-/* ====================== usos ====================== */
-.usos{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2.5rem}
-.uso{
-  background:var(--papel);border:1px solid var(--borda);border-radius:var(--raio);
-  padding:1.6rem;display:flex;flex-direction:column;
-}
-.uso h3{margin-bottom:.6rem;color:var(--madeira)}
-.uso p{color:var(--texto-suave);font-size:.98rem;flex:1}
-.uso a{
-  align-self:flex-start;margin-top:.5rem;font-weight:800;font-size:.95rem;
-  color:var(--madeira);text-decoration:none;border-bottom:2px solid var(--sol);padding-bottom:2px;
-}
-.uso a:hover{color:var(--madeira-claro)}
-
-/* ====================== galerias ====================== */
-.grade{display:grid;gap:1rem;margin-top:2.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.grade figure{margin:0;border-radius:var(--raio);overflow:hidden;background:var(--creme)}
-.grade img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
-.grade--destaque figure:first-child{grid-column:span 2}
-@media (max-width:640px){.grade--destaque figure:first-child{grid-column:auto}}
-.legenda{
-  margin-top:1.2rem;font-size:.9rem;color:var(--texto-suave);
-  border-left:3px solid var(--sol);padding-left:.9rem;max-width:60ch;
-}
-
-/* ====================== faixa do pôr do sol ====================== */
-.sol{position:relative;color:#fff;text-align:center;isolation:isolate}
-.sol img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
-  object-position:50% 68%;
-}
-.sol::before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(22,32,43,.35),rgba(22,32,43,.75));
-}
-.sol .env{padding:clamp(4rem,12vw,8rem) 0}
-.sol h2{max-width:22ch;margin-inline:auto;text-shadow:0 2px 24px rgba(0,0,0,.5)}
-.sol p{max-width:48ch;margin:1.2rem auto 0;color:#F2E7D7;text-shadow:0 2px 14px rgba(0,0,0,.5)}
-
-/* ====================== avaliações ====================== */
-/* bloco da nota: número, estrelas e contagem empilhados, no formato do
-   cartão de avaliação do próprio Google */
-.nota{display:inline-flex;flex-direction:column;align-items:center;gap:.2rem;margin-top:1.6rem}
-.nota b{font-size:clamp(2.8rem,9vw,3.6rem);font-weight:700;line-height:1.05;color:var(--texto)}
-.nota .estrelas{color:#F5B301;font-size:1.15rem;letter-spacing:.14em;line-height:1}
-.nota small{color:var(--texto-suave);font-size:.88rem;margin-top:.35rem}
-.vozes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:2.2rem}
-.voz{
-  margin:0;padding:1.4rem;background:var(--papel);
-  border:1px solid var(--borda);border-radius:var(--raio);
-}
-.voz p{font-size:1rem;margin-bottom:.9rem}
-.voz figcaption{font-size:.85rem;font-weight:700;color:var(--texto-suave)}
-
-/* ====================== leque do instagram ======================
-   Mesmo componente do site da GeP. --passo (distância entre os cards),
-   --card (largura de referência) e --dyf (escala do desnível) governam o
-   leque inteiro: no celular ele só encolhe, nunca vira carrossel. */
-.insta{background:var(--noite);color:#fff;text-align:center;overflow:hidden}
-.insta h2{color:#fff}
-.insta h2 span{color:var(--sol)}
-.insta__chamada{color:#CBBBA4;max-width:46ch;margin:.9rem auto 0}
-.insta__leque{
-  --passo:152px;--card:180px;--dyf:1px;
-  position:relative;z-index:1;height:300px;margin:2.5rem 0 1rem;
-}
-.insta__item{
-  --x:calc(var(--i) * var(--passo));
-  --y:calc(var(--dy) * var(--dyf));
-  display:block;position:absolute;top:50%;left:50%;
-  width:calc(var(--card) * var(--n));aspect-ratio:3/4;overflow:hidden;border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.45);
-  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));
-  transition:transform .25s ease,box-shadow .25s ease;
-}
-.insta__item:hover{
-  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y) - 10px)) rotate(0deg) scale(1.05);
-  box-shadow:0 20px 40px rgba(0,0,0,.55);z-index:50 !important;
-}
-.insta__item img{width:100%;height:100%;object-fit:cover;display:block}
-.insta__cta{margin-top:1.5rem;position:relative;z-index:1}
-/* estado inicial (cards recolhidos no centro): só com JS e sem "reduzir
-   movimento". Sem isso os cards já nascem na posição final. */
-.insta__item--entrando{
-  transform:translate(-50%,-50%) rotate(0deg) scale(.85);opacity:0;
-  transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s ease;
-}
-.insta__leque--visivel .insta__item--entrando{
-  transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r)) scale(1);
-  opacity:1;
-}
-@media (max-width:760px){
-  .insta__leque{--passo:58px;--card:142px;--dyf:.5px;height:250px;margin:2rem 0 .5rem}
-  .insta__item{border-radius:13px;box-shadow:0 8px 20px rgba(0,0,0,.45)}
-  /* sem hover em toque: levantar card com o dedo em cima não acontece */
-  .insta__item:hover{
-    transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));
-    box-shadow:0 8px 20px rgba(0,0,0,.45);
-  }
-}
-@media (max-width:400px){.insta__leque{--passo:52px;--card:126px;height:225px}}
-
-/* ====================== agenda / cta ====================== */
-.agenda{background:var(--noite);color:#fff;text-align:center}
-.agenda h2{margin-bottom:1rem}
-.agenda p{color:#CBBBA4;max-width:52ch;margin-inline:auto}
-.agenda .acoes{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:2rem}
-.selo{
-  display:inline-block;margin-bottom:1.2rem;padding:.35rem 1rem;border-radius:999px;
-  background:rgba(224,138,60,.16);border:1px solid rgba(224,138,60,.5);
-  color:var(--sol);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
-}
-
-/* ====================== rodapé ====================== */
-.rodape{background:var(--mata);color:#D9CDB8;padding:clamp(3rem,7vw,4.5rem) 0 2rem;font-size:.95rem}
-.rodape a{color:#fff}
-.rodape h3{color:#fff;margin-bottom:.9rem;font-size:1.05rem}
-.rodape__topo{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
-.rodape__marca p{color:#C3B8A2;max-width:34ch}
-
-/* linhas de contato com ícone */
-.contatos{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
-.contatos li{display:flex;align-items:flex-start;gap:.75rem}
-.contatos svg{flex:none;width:22px;height:22px;margin-top:.15rem;color:var(--sol)}
-.contatos a{font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
-.contatos a:hover{border-bottom-color:#fff}
-.contatos small{display:block;color:#A99C88;font-weight:400;font-size:.85rem;margin-top:.15rem}
-
-/* botões redondos de rede social */
-.redes{display:flex;gap:.7rem;margin-top:1.4rem}
-.redes a{
-  display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
-  color:#fff;transition:background .18s,transform .18s,border-color .18s;
-}
-.redes a:hover{background:rgba(255,255,255,.2);border-color:#fff;transform:translateY(-2px)}
-.redes svg{width:20px;height:20px}
-
-/* mapa */
-.mapa{
-  border-radius:var(--raio);overflow:hidden;
-  border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.2);
-  aspect-ratio:4/3;
-}
-.mapa iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.9)}
-@media (max-width:700px){.mapa{aspect-ratio:3/2}}
-/* O mapa incorporado abre a ficha por coordenada, não a página do rancho no
-   Google. Quem quer ver avaliação, foto e rota precisa de um caminho direto
-   pro perfil — daí o botão logo abaixo, e não só o pin. */
-/* A cor precisa vir por `.rodape ...`: a regra `.rodape a{color:#fff}` tem
-   especificidade maior que `.btn--claro` sozinha e pintava o texto de branco
-   sobre o botão branco — sumia por completo. */
-.rodape .mapa__ir{
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-  margin-top:.9rem;width:100%;padding:.7rem 1.1rem;font-size:.95rem;
-  color:var(--madeira);
-}
-.rodape .mapa__ir:hover{color:var(--madeira)}
-.mapa__ir svg{width:18px;height:18px;flex:none}
-
-.rodape__base{
-  margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.15);
-  display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between;
-  font-size:.85rem;color:#A99C88;
-}
-
-/* ====================== whatsapp flutuante ====================== */
-.zap{
-  position:fixed;right:1rem;bottom:1rem;z-index:50;
-  display:flex;align-items:center;gap:.55rem;
-  padding:.8rem 1.25rem;border-radius:999px;
-  background:#25D366;color:#0B2E17;font-weight:800;text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.28);
-}
-.zap:hover{background:#1FBE5A}
-@media (max-width:420px){.zap span{display:none}.zap{padding:.9rem}}
-</style>
+</script>
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
-<section class="palco">
-  <div class="palco__trilho">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="marca" viewBox="0 0 48 48"><circle cx="31" cy="14" r="5.5"/><path d="M3 37 15 22l7 8 8-10 15 17"/><path d="M3 42h42"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-esq" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-dir" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-cama" viewBox="0 0 24 24"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></symbol>
+  <symbol id="i-banho" viewBox="0 0 24 24"><path d="M10 4 8 6"/><path d="M17 19v2"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></symbol>
+  <symbol id="i-piscina" viewBox="0 0 24 24"><path d="M19 5a2 2 0 0 0-2 2v11"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M7 13h10"/><path d="M7 9h10"/><path d="M9 5a2 2 0 0 0-2 2v11"/></symbol>
+  <symbol id="i-gourmet" viewBox="0 0 24 24"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></symbol>
+  <symbol id="i-fogo" viewBox="0 0 24 24"><path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10a5 5 0 1 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C8 4.5 11 2 12 2Z"/><path d="m5 22 14-4"/><path d="m5 18 14 4"/></symbol>
+  <symbol id="i-mirante" viewBox="0 0 24 24"><path d="M10 10h4"/><path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/><path d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z"/><path d="M22 16H2"/><path d="M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z"/><path d="M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3"/></symbol>
+  <symbol id="i-arvores" viewBox="0 0 24 24"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></symbol>
+  <symbol id="i-poente" viewBox="0 0 24 24"><path d="M12 10V2"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m16 6-4 4-4-4"/><path d="M16 18a4 4 0 0 0-8 0"/></symbol>
+</svg>
 
-    <div class="palco__fundo">
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__fundo"></div>
+  <div class="intro__conteudo">
+    <p class="intro__nome"><span>Rancho</span> <span>Canaã</span></p>
+    <span class="intro__linha"></span>
+    <p class="intro__lema">Seu pedaço de paraíso em Itabira</p>
+  </div>
+  <span class="intro__pular">Toque pra pular</span>
+</div>
+
+<header class="topo" id="topo">
+  <a class="marca" href="#inicio" aria-label="Rancho Canaã, voltar ao início">
+    <svg aria-hidden="true"><use href="#marca"/></svg>
+    <span>Rancho Canaã<small>Itabira · MG</small></span>
+  </a>
+  <nav class="topo__nav" aria-label="Seções">
+    <a href="#casamentos">Casamentos</a>
+    <a href="#fim-de-semana">Fim de semana</a>
+    <a href="#ensaios">Ensaios</a>
+    <a href="#galeria">Galeria</a>
+  </nav>
+  <a class="btn btn--sol btn--pequeno" href="#reservar">Consultar datas</a>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero__fundo">
+    <div class="hero__zoom">
       <picture>
-        <source media="(max-width: 700px)" srcset="assets/img/aerea-mobile.webp">
-        <img src="assets/img/aerea-por-do-sol.webp" alt="Vista aérea do Rancho Canaã ao pôr do sol: casa de madeira, piscina, gramado e montanhas ao fundo" width="1400" height="1044" fetchpriority="high">
+        <source media="(max-width: 699px)" srcset="assets/img/aerea-m.webp" width="1100" height="1588">
+        <img src="assets/img/aerea-1920.webp" width="1920" height="1432" alt="Vista aérea do Rancho Canaã ao pôr do sol: chalé de madeira, piscina, mirante, gramado e a serra com névoa no vale" fetchpriority="high">
       </picture>
     </div>
-
-    <picture class="palco__midia">
-      <source media="(max-width: 700px)" srcset="assets/img/sala-mobile.webp">
-      <img src="assets/img/sala.webp" alt="Sala do chalé com sofá, escada de madeira, mesa de jantar e adega ao fundo" width="1400" height="932">
-    </picture>
-
-    <h1 class="palco__titulo">
-      <span class="palco__meia palco__meia--esq">Seu pedaço</span>
-      <span class="palco__meia palco__meia--dir">de paraíso.</span>
+  </div>
+  <div class="hero__veu"></div>
+  <div class="hero__conteudo wrap">
+    <p class="hero__selo"><span class="estrelas" aria-hidden="true">★★★★★</span> 4,9 no Google · 29 avaliações</p>
+    <h1 class="hero__titulo">
+      <span class="linha"><span>Seu pedaço</span></span>
+      <span class="linha"><span>de <em>paraíso</em></span></span>
+      <span class="linha"><span>em Itabira.</span></span>
     </h1>
-
-    <p class="palco__nota palco__nota--esq">Rancho Canaã · Itabira, MG</p>
-    <p class="palco__nota palco__nota--dir">Role para entrar ↓</p>
-
-    <div class="palco__final">
-      <p>Casa de madeira, piscina e o pôr do sol inteiro só pra você</p>
-      <div class="palco__acoes">
-        <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Consultar disponibilidade</a>
-        <a class="btn btn--claro" href="#a-casa">Ver a casa</a>
-      </div>
+    <p class="hero__sub">Casamentos ao ar livre, fins de semana num chalé de madeira e ensaios na luz dourada do fim de tarde.</p>
+    <div class="hero__acoes">
+      <a class="btn btn--sol" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20consultar%20as%20datas%20dispon%C3%ADveis." target="_blank" rel="noopener"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>Consultar datas</a>
+      <a class="btn btn--vidro" href="#experiencias">Conhecer o rancho</a>
     </div>
+  </div>
+  <a class="hero__rolar" href="#experiencias" aria-label="Rolar pra conhecer o rancho"><span></span></a>
+</section>
 
+<section class="faixa" aria-hidden="true">
+  <div class="faixa__trilho">
+    <span>Casamentos ao ar livre</span><i>✦</i><span>Fins de semana no chalé</span><i>✦</i><span>Ensaios fotográficos</span><i>✦</i><span>Festas intimistas</span><i>✦</i><span>Pôr do sol na serra</span><i>✦</i>
+    <span>Casamentos ao ar livre</span><i>✦</i><span>Fins de semana no chalé</span><i>✦</i><span>Ensaios fotográficos</span><i>✦</i><span>Festas intimistas</span><i>✦</i><span>Pôr do sol na serra</span><i>✦</i>
   </div>
 </section>
 
-<script>
-  (function () {
-    var palco = document.querySelector(".palco");
-    if (!palco) return;
-    var topo = 0, curso = 0;
-    function medir() {
-      topo = palco.getBoundingClientRect().top + window.scrollY;
-      curso = palco.offsetHeight - window.innerHeight;
-    }
-    var agendado = false, ultimo = -1;
-    function atualizar() {
-      agendado = false;
-      var p = curso > 0 ? Math.min(1, Math.max(0, (window.scrollY - topo) / curso)) : 0;
-      if (p === ultimo) return;
-      if (p !== 0 && p !== 1 && Math.abs(p - ultimo) < 0.002) return;
-      ultimo = p;
-      palco.style.setProperty("--p", p.toFixed(4));
-      palco.classList.toggle("palco--fim", p > 0.78);
-    }
-    function agendar() { if (!agendado) { agendado = true; requestAnimationFrame(atualizar); } }
-    window.addEventListener("scroll", agendar, { passive: true });
-    window.addEventListener("resize", function () { medir(); agendar(); });
-    medir();
-    atualizar();
-  })();
-</script>
-
-<!-- ============ USOS ============ -->
-<section class="secao" id="usos">
-  <div class="env">
-    <span class="olho">Três jeitos de usar</span>
-    <h2>O rancho muda conforme o motivo de você vir.</h2>
-    <p class="chamada">Tem quem chegue com mala pra três dias. Tem quem chegue de vestido, faça as fotos e vá embora antes de escurecer. O rancho atende os dois — só faz questão de que ninguém perca o pôr do sol.</p>
-
-    <div class="usos">
-      <article class="uso">
+<section class="secao" id="experiencias">
+  <div class="wrap">
+    <div class="cabeca">
+      <p class="olho">O rancho</p>
+      <h2>Três jeitos de viver <em>o Canaã</em>.</h2>
+      <p>O mesmo chalé, o mesmo gramado e o mesmo pôr do sol. O que muda é o motivo de você vir.</p>
+    </div>
+    <div class="jeitos">
+      <a class="jeito" href="#casamentos">
+        <div class="jeito__foto" data-parallax="-0.06"><img src="assets/img/casamento/noivos-chale.webp" width="1000" height="1250" alt="Noivos de mãos dadas no gramado, com o chalé de madeira ao fundo" loading="lazy" decoding="async"></div>
+        <span class="jeito__num">01</span>
+        <h3>Casamentos e eventos</h3>
+        <p>Making of dentro do chalé, cerimônia no gramado e o pôr do sol na hora do sim.</p>
+        <span class="jeito__mais">Ver o grande dia <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+      </a>
+      <a class="jeito" href="#fim-de-semana">
+        <div class="jeito__foto" data-parallax="-0.06"><img src="assets/img/deck-espreguicadeiras.webp" width="640" height="800" alt="Espreguiçadeiras de madeira no deck da piscina ao pôr do sol" loading="lazy" decoding="async"></div>
+        <span class="jeito__num">02</span>
         <h3>Fim de semana</h3>
-        <p>Quatro quartos, cozinha à disposição e nenhum vizinho por perto. Chegar na sexta, acordar com a serra na janela e não ter hora pra nada até domingo.</p>
-        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20reservar%20um%20fim%20de%20semana%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Ver datas livres →</a>
+        <p>Um chalé de madeira inteiro pra família ou pra turma: 4 quartos, piscina e área gourmet.</p>
+        <span class="jeito__mais">Conhecer a casa <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+      </a>
+      <a class="jeito" href="#ensaios">
+        <div class="jeito__foto" data-parallax="-0.06"><img src="assets/img/rancho/sol-balanco.webp" width="1000" height="1250" alt="Casal sentado no balanço de madeira, na luz dourada do fim de tarde" loading="lazy" decoding="async"></div>
+        <span class="jeito__num">03</span>
+        <h3>Ensaios fotográficos</h3>
+        <p>Balanço, pergolado, escada de madeira e o contraluz que os fotógrafos da região já conhecem.</p>
+        <span class="jeito__mais">Ver os cenários <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+      </a>
+    </div>
+    <p class="arraste">Deslize pro lado →</p>
+  </div>
+</section>
+
+<section class="secao secao--noite casamentos" id="casamentos">
+  <div class="wrap">
+    <div class="cabeca">
+      <p class="olho">Casamentos e eventos</p>
+      <h2>Seu grande dia <em>ao pôr do sol</em>.</h2>
+      <p>O gramado vira altar, o chalé vira camarim da noiva e o pôr do sol entra na cerimônia sem ninguém precisar combinar. Do casamento intimista à festa com a família inteira.</p>
+    </div>
+
+    <figure class="panorama">
+      <div class="panorama__img" data-parallax="0.07">
+        <picture>
+          <source media="(max-width: 699px)" srcset="assets/img/casamento/cerimonia-panorama-m.webp" width="900" height="1340">
+          <img src="assets/img/casamento/cerimonia-panorama.webp" width="1920" height="1200" alt="Cerimônia de casamento no gramado do rancho: celebrante, noivos olhando pro céu e convidados sentados" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <figcaption>Cerimônia no gramado do rancho, setembro de 2026 · Foto: Vitor Estevão Fotografia</figcaption>
+    </figure>
+
+    <div class="tempos__titulo">
+      <p class="olho">O grande dia</p>
+      <h3>Em quatro <em>tempos</em></h3>
+    </div>
+
+    <div class="tempos">
+      <article class="tempo">
+        <div class="tempo__arte">
+          <span class="tempo__num" data-parallax="-0.12" aria-hidden="true">01</span>
+          <span class="tempo__anel" data-parallax="0.08" aria-hidden="true"></span>
+          <div class="tempo__grande tempo__grande--largo">
+            <div class="camada" data-parallax="0.05">
+              <picture>
+                <source media="(max-width: 699px)" srcset="assets/img/casamento/makingof-panorama-m.webp" width="900" height="1250">
+                <img src="assets/img/casamento/makingof-panorama.webp" width="1920" height="1200" alt="Noiva sentada no sofá do quarto de madeira, com o véu espalhado pelo chão" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <div class="tempo__pequena" data-parallax="-0.1"><img src="assets/img/casamento/vestido-varanda.webp" width="900" height="1125" alt="Vestido de noiva pendurado na porta da varanda, com a serra ao fundo" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="tempo__texto">
+          <p class="olho">01 · O making of</p>
+          <h3>A noiva se arruma <em>dentro do chalé</em>.</h3>
+          <p>Parede de madeira, luz de janela, escada de degraus largos e uma varanda com a serra ao fundo. O vestido pendurado ali já vira foto antes de a noiva vestir.</p>
+          <span class="tempo__credito">Fotos: Vitor Estevão Fotografia</span>
+        </div>
       </article>
-      <article class="uso">
-        <h3>Festa intimista</h3>
-        <p>Aniversário, bodas, batizado, confraternização de família. Área gourmet coberta com churrasqueira, deck e jardim — do tamanho de quem cabe na mesa, não de salão de eventos.</p>
-        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20fazer%20uma%20festa%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Ver se a data está livre →</a>
+
+      <article class="tempo tempo--inv">
+        <div class="tempo__arte">
+          <span class="tempo__num" data-parallax="-0.12" aria-hidden="true">02</span>
+          <span class="tempo__anel" data-parallax="0.08" aria-hidden="true"></span>
+          <div class="tempo__grande">
+            <span class="tempo__video-tag">Vídeo do rancho</span>
+            <div class="camada" data-parallax="0.05">
+              <video data-auto muted loop playsinline preload="none" poster="assets/img/casamento/poster-gramado.webp" width="540" height="832" aria-label="Gramado montado pra cerimônia: cadeiras brancas, altar e mesas com toalha">
+                <source src="assets/video/gramado-montado.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="tempo__pequena" data-parallax="-0.1"><img src="assets/img/casamento/noivos-ceu.webp" width="1000" height="1250" alt="Noivos de mãos dadas, olhando pro céu durante a cerimônia" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="tempo__texto">
+          <p class="olho">02 · A cerimônia</p>
+          <h3>O altar fica no gramado, <em>de frente pra serra</em>.</h3>
+          <p>Cadeiras no gramado, tapete até o altar e o horizonte aberto atrás dos noivos. Não tem parede nem teto disputando a atenção com a vista.</p>
+          <span class="tempo__credito">Vídeo: Rancho Canaã · Foto: Vitor Estevão Fotografia</span>
+        </div>
       </article>
-      <article class="uso">
-        <h3>Ensaio fotográfico</h3>
-        <p>Pré-wedding, gestante, família, debutante. Madeira, contraluz e um horizonte sem poste no meio — é por isso que os fotógrafos da região voltam aqui.</p>
-        <a href="https://wa.me/5531991351079?text=Oi!%20Queria%20agendar%20um%20ensaio%20fotogr%C3%A1fico%20no%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">Agendar sessão →</a>
+
+      <article class="tempo">
+        <div class="tempo__arte">
+          <span class="tempo__num" data-parallax="-0.12" aria-hidden="true">03</span>
+          <span class="tempo__anel" data-parallax="0.08" aria-hidden="true"></span>
+          <div class="tempo__grande">
+            <div class="camada" data-parallax="0.05"><img src="assets/img/casamento/saida-buque.webp" width="1000" height="1250" alt="Noiva levanta o buquê e o noivo comemora na saída da cerimônia" loading="lazy" decoding="async"></div>
+          </div>
+          <div class="tempo__pequena" data-parallax="-0.1"><img src="assets/img/casamento/noiva-escada.webp" width="900" height="1125" alt="Noiva descendo a escada de madeira do chalé" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="tempo__texto">
+          <p class="olho">03 · O sim</p>
+          <h3>Buquê pro alto e <em>a luz do fim de tarde</em> fazendo o resto.</h3>
+          <p>A cerimônia termina com o sol baixando atrás da serra. É a hora das fotos que vão pra parede da sala.</p>
+          <span class="tempo__credito">Fotos: Vitor Estevão Fotografia</span>
+        </div>
       </article>
+
+      <article class="tempo tempo--inv">
+        <div class="tempo__arte">
+          <span class="tempo__num" data-parallax="-0.12" aria-hidden="true">04</span>
+          <span class="tempo__anel" data-parallax="0.08" aria-hidden="true"></span>
+          <div class="tempo__grande">
+            <span class="tempo__video-tag">Drone</span>
+            <div class="camada" data-parallax="0.05">
+              <video data-auto muted loop playsinline preload="none" poster="assets/img/casamento/poster-drone.webp" width="480" height="854" aria-label="Imagem de drone da cerimônia no gramado, com convidados e o chalé de madeira">
+                <source src="assets/video/cerimonia-drone.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="tempo__texto">
+          <p class="olho">04 · A festa</p>
+          <h3>Visto do alto, <em>o rancho inteiro vira festa</em>.</h3>
+          <p>Gramado amplo pros convidados, mesas ao ar livre e a piscina ali do lado. O drone mostra o tamanho do espaço melhor do que qualquer descrição.</p>
+          <span class="tempo__credito">Vídeo: Cleber Moura</span>
+          <a class="btn btn--sol" style="margin-top:1.8rem" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20saber%20das%20datas%20para%20casamento." target="_blank" rel="noopener"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>Ver datas pro meu casamento</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="novidade">
+      <span class="novidade__tag">Em obra</span>
+      <div>
+        <h3>Salão de festas e estacionamento <em>novos</em></h3>
+        <p>O rancho está construindo um salão de festas e um estacionamento, pra receber família e convidados com ainda mais conforto.</p>
+      </div>
+      <a class="btn btn--vidro btn--pequeno" href="#reservar">Consultar datas</a>
     </div>
   </div>
 </section>
 
-<!-- ============ A CASA ============ -->
-<section class="secao secao--creme" id="a-casa">
-  <div class="env">
-    <span class="olho">A casa</span>
-    <h2>Madeira por dentro e por fora, com pé-direito de chalé.</h2>
-    <p class="chamada">Sala com escada aparente e mezanino, mesa posta pra todo mundo sentar junto, e a varanda do andar de cima olhando a serra. São quatro quartos, um deles suíte, e dois banheiros sociais.</p>
-
-    <div class="grade">
-      <figure>
-        <img src="assets/img/quarto.webp" alt="Quarto com cama de casal, cabeceira estofada e janela de madeira aberta para a mata" width="859" height="1130" loading="lazy">
-      </figure>
-      <figure>
-        <img src="assets/img/sala.webp" alt="Sala do chalé com teto de madeira, escada aparente e mesa de jantar" width="1400" height="932" loading="lazy">
-      </figure>
-      <figure>
-        <img src="assets/img/fachada.webp" alt="Casa de madeira de dois andares vista de fora, com varanda no andar superior" width="1200" height="551" loading="lazy">
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ÁREA EXTERNA ============ -->
-<section class="secao" id="area-externa">
-  <div class="env">
-    <span class="olho">Do lado de fora</span>
-    <h2>Piscina, deck e churrasqueira — o dia inteiro acontece aqui.</h2>
-    <p class="chamada">A casa é onde se dorme. O rancho de verdade é o que tem em volta dela: piscina com deck de pedra e guarda-sol, área gourmet coberta com churrasqueira e bancada, e um deck de madeira com cadeira de balanço virado pra mata.</p>
-
-    <div class="grade">
-      <figure>
-        <img src="assets/img/gramado-piscina.webp" alt="Gramado do rancho com piscina, deck de pedra e vista aberta para as montanhas" width="1200" height="551" loading="lazy">
-      </figure>
-      <figure>
-        <img src="assets/img/piscina.webp" alt="Piscina retangular com cascata, deck de pedra, guarda-sol e mesa com cadeiras de madeira" width="640" height="673" loading="lazy">
-      </figure>
-      <figure>
-        <img src="assets/img/deck-espreguicadeiras.webp" alt="Espreguiçadeiras de madeira ao lado da piscina, voltadas para o pôr do sol" width="640" height="800" loading="lazy">
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COMODIDADES ============ -->
-<section class="secao secao--creme" id="estrutura">
-  <div class="env">
-    <span class="olho">O que tem lá</span>
-    <h2>Estrutura pronta pra você não precisar levar nada.</h2>
-
-    <div class="comodidades">
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6"/><path d="M2 18h20"/><path d="M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><path d="M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
-          4 quartos
-        </h3>
-        <p>Sendo uma suíte, mais dois banheiros sociais. Cabe a família inteira e ainda sobra cama.</p>
-      </article>
-
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c1.5 0 1.5 1.2 3 1.2s1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2"/><path d="M2 20c1.5 0 1.5 1.2 3 1.2s1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2 1.5 1.2 3 1.2 1.5-1.2 3-1.2"/><path d="M7 15V6a2 2 0 0 1 4 0"/><path d="M17 15V6a2 2 0 0 0-4 0"/><path d="M7 9h4"/></svg>
-          Piscina
-        </h3>
-        <p>Com cascata, deck de pedra, guarda-sol e espreguiçadeiras viradas pro pôr do sol.</p>
-      </article>
-
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.2 2.7 4 2.7 5.4 0 1.6-1.2 2.4-2.2 3.4"/><path d="M8.5 21a5.5 5.5 0 0 1-2.4-6.8C6.9 12 8.6 10.6 10 9.4"/><path d="M15.5 21a5.5 5.5 0 0 0 2.4-6.8"/><path d="M6 21h12"/></svg>
-          Área gourmet
-        </h3>
-        <p>Coberta, com churrasqueira e bancada. Chova ou faça sol, o churrasco de domingo sai.</p>
-      </article>
-
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 9.5V17"/><path d="M19 9.5V17"/><path d="M4 17h16"/><path d="M9 17v4"/><path d="M15 17v4"/><path d="M9 13h6"/></svg>
-          Mirante de madeira
-        </h3>
-        <p>Deck suspenso e coberto, com escada própria, virado pro vale. É de lá que se vê o dia acabar.</p>
-      </article>
-
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"/><path d="M4 17v-4.2a2 2 0 0 1 .2-.9l1.9-3.6A2 2 0 0 1 7.9 7h8.2a2 2 0 0 1 1.8 1.1l1.9 3.6c.1.3.2.6.2.9V17"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M4.5 12.5h15"/></svg>
-          Estacionamento
-        </h3>
-        <p>Garagem coberta ao lado da casa e espaço de sobra no gramado pra quem vier em mais carros.</p>
-      </article>
-
-      <article class="item">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19h20"/><path d="M3 19l6.5-10 4 6 2.5-3.5L21 19"/><circle cx="17.5" cy="6" r="2"/></svg>
-          Vista e silêncio
-        </h3>
-        <p>O rancho fica na parte alta, sem vizinho na frente e sem morro tampando o horizonte.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PÔR DO SOL ============ -->
-<section class="sol">
-  <img src="assets/img/pergolado-por-do-sol.webp" alt="Sol se pondo atrás das montanhas, visto de baixo do pergolado de madeira ao lado da piscina" width="1200" height="774" loading="lazy">
-  <div class="env">
-    <h2>Todo dia tem um, e ele é sempre a melhor parte.</h2>
-    <p>O rancho fica na parte alta, virado pro horizonte. Não tem prédio, não tem morro na frente. Por volta das seis, todo mundo para o que está fazendo e vai olhar.</p>
-  </div>
-</section>
-
-<!-- ============ AVALIAÇÕES ============ -->
-<section class="secao secao--creme" id="avaliacoes">
-  <div class="env">
-    <span class="olho">Avaliações</span>
-    <h2>Quem já veio conta a mesma história.</h2>
-    <p class="chamada">As avaliações repetem sempre as mesmas coisas: a vista, o silêncio e o aconchego da casa de madeira. Logo depois vem o elogio aos donos — “atenciosos” aparece quase tanto quanto “aconchegante”.</p>
-
-    <div class="nota">
-      <b>4,9</b>
-      <span class="estrelas" aria-hidden="true">★★★★★</span>
-      <small>29 avaliações no Google</small>
+<section class="secao secao--creme" id="fim-de-semana">
+  <div class="wrap">
+    <div class="cabeca">
+      <p class="olho">Fim de semana</p>
+      <h2>Um chalé de madeira inteiro, <em>só pra vocês</em>.</h2>
+      <p>Madeira por dentro e por fora, pé-direito de chalé, piscina com cascata e uma varanda virada pro horizonte. Pra família, pra turma de amigos ou pra só descansar.</p>
     </div>
 
-    <div class="vozes">
-      <figure class="voz">
-        <p>“Chalé com ótima infraestrutura, ambiente aconchegante e extremamente tranquilo. Ideal para descansar, ter contato com a natureza e recarregar as energias.”</p>
-        <figcaption>Alexandre F.</figcaption>
+    <div class="fatos">
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-cama"/></svg><strong>4 quartos</strong><span>sendo 1 suíte, com camas de casal e de solteiro</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-banho"/></svg><strong>2 banheiros sociais</strong><span>além do banheiro da suíte</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-piscina"/></svg><strong>Piscina com cascata</strong><span>deck de pedra, guarda-sol e espreguiçadeiras</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-gourmet"/></svg><strong>Área gourmet</strong><span>coberta, com churrasqueira e bancada</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-fogo"/></svg><strong>Deck de madeira</strong><span>cadeiras de balanço, braseiro e rede</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-mirante"/></svg><strong>Mirante</strong><span>de madeira, elevado e coberto</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-arvores"/></svg><strong>Gramado amplo</strong><span>com escadaria de pedra entre os níveis</span></div>
+      <div class="fato"><svg class="ico" aria-hidden="true"><use href="#i-poente"/></svg><strong>Vista pra serra</strong><span>da varanda, do deck e do gramado</span></div>
+    </div>
+
+    <div class="bento">
+      <figure class="b1">
+        <picture>
+          <source media="(max-width: 860px)" srcset="assets/img/sala.webp">
+          <img src="assets/img/sala-mobile.webp" width="680" height="915" alt="Sala do chalé com escada de madeira, mesa de jantar e tapete de couro" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Sala com pé-direito de chalé</figcaption>
       </figure>
-      <figure class="voz">
-        <p>“Perfeito para quem quer descansar. Além de lindo, é aconchegante e traz uma verdadeira sensação de paz.”</p>
-        <figcaption>Júlia R.</figcaption>
-      </figure>
-      <figure class="voz">
-        <p>“Que lugar maravilhoso. Proprietários super educados e atenciosos. Hiper recomendo.”</p>
-        <figcaption>Nélio A.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INSTAGRAM ============ -->
-<section class="insta secao" id="instagram">
-  <div class="env">
-    <span class="olho">No dia a dia</span>
-    <h2>O rancho está no <span>Instagram</span>.</h2>
-    <p class="insta__chamada">É lá que saem as fotos novas, os pôr do sol da semana e os ensaios feitos aqui.</p>
-
-    <!-- Cada card informa só o índice (--i), o desnível (--dy), a rotação e o
-         tamanho relativo (--n). Distância e tamanho base vivem no CSS. -->
-    <div class="insta__leque">
-      <a class="insta__item" style="--i:-2.5;--dy:18;--r:-4deg;--n:.84;z-index:10" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-1.webp" alt="Publicação do Instagram do Rancho Canaã: a casa de madeira ao entardecer" width="540" height="720" loading="lazy" decoding="async"></a>
-      <a class="insta__item" style="--i:-1.5;--dy:38;--r:-3deg;--n:.89;z-index:20" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-2.webp" alt="Publicação do Instagram do Rancho Canaã: a sala de madeira" width="540" height="720" loading="lazy" decoding="async"></a>
-      <a class="insta__item" style="--i:-.5;--dy:4;--r:-2deg;--n:1;z-index:40" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-3.webp" alt="Publicação do Instagram do Rancho Canaã: balanço contra o sol se pondo" width="540" height="720" loading="lazy" decoding="async"></a>
-      <a class="insta__item" style="--i:.5;--dy:26;--r:2deg;--n:1;z-index:40" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-4.webp" alt="Publicação do Instagram do Rancho Canaã: a piscina com guarda-sol" width="540" height="720" loading="lazy" decoding="async"></a>
-      <a class="insta__item" style="--i:1.5;--dy:46;--r:3deg;--n:.89;z-index:20" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-5.webp" alt="Publicação do Instagram do Rancho Canaã: espreguiçadeiras no fim da tarde" width="540" height="720" loading="lazy" decoding="async"></a>
-      <a class="insta__item" style="--i:2.5;--dy:12;--r:4deg;--n:.84;z-index:10" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><img src="assets/img/instagram/post-6.webp" alt="Publicação do Instagram do Rancho Canaã: a sala vista do mezanino" width="540" height="720" loading="lazy" decoding="async"></a>
+      <figure class="b2"><img src="assets/img/quarto.webp" width="859" height="1130" alt="Quarto de madeira com cama de casal, cabeceira capitonê e janela pra mata" loading="lazy" decoding="async"><figcaption>Quarto com janela pra mata</figcaption></figure>
+      <figure class="b3"><img src="assets/img/piscina.webp" width="640" height="673" alt="Piscina com cascata, deck de pedra, guarda-sol e mesa" loading="lazy" decoding="async"><figcaption>Piscina com cascata</figcaption></figure>
+      <figure class="b4"><img src="assets/img/pergolado-por-do-sol.webp" width="1200" height="774" alt="Sol se pondo entre os caibros do pergolado, com a piscina ao lado" loading="lazy" decoding="async"><figcaption>Pergolado no fim de tarde</figcaption></figure>
+      <figure class="b5"><img src="assets/img/fachada.webp" width="1200" height="551" alt="Fachada do chalé de madeira de dois andares, com varanda e garagem coberta" loading="lazy" decoding="async"><figcaption>O chalé de dois andares</figcaption></figure>
     </div>
 
-    <div class="insta__cta">
-      <a class="btn btn--claro" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
-    </div>
-  </div>
-</section>
-
-<script>
-  // O leque entra em posição quando a seção aparece na tela, não no
-  // carregamento — ela fica no fim da página. Sem JS ou com "reduzir
-  // movimento", os cards já nascem posicionados: a classe é só reforço.
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-    document.querySelectorAll(".insta__leque .insta__item").forEach(function (item, i) {
-      item.classList.add("insta__item--entrando");
-      item.style.transitionDelay = (i * 0.09) + "s";
-    });
-    var obs = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("insta__leque--visivel"); obs.disconnect(); }
-      });
-    }, { threshold: 0.35 });
-    obs.observe(document.querySelector(".insta__leque"));
-  }
-</script>
-
-<!-- ============ AGENDA ============ -->
-<section class="agenda secao" id="reservar">
-  <div class="env">
-    <span class="selo">Agenda 2026 aberta</span>
-    <h2>Feriado e alta temporada fecham primeiro.</h2>
-    <p>Quem já veio costuma remarcar na saída. Manda a data que você tem em mente e a gente confere na hora se ainda está livre — a reserva é combinada direto no WhatsApp, sem formulário e sem cadastro.</p>
-    <div class="acoes">
-      <a class="btn" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20consultar%20uma%20data." target="_blank" rel="noopener">Consultar uma data</a>
-      <a class="btn btn--claro" href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">Ver o Instagram</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ RODAPÉ ============ -->
-<footer class="rodape" id="contato">
-  <div class="env">
-    <div class="rodape__topo">
-
-      <div class="rodape__marca">
-        <h3>Rancho Canaã</h3>
-        <p>Casa de madeira para fim de semana, festa intimista e ensaio fotográfico, na parte alta de Itabira — Minas Gerais.</p>
-        <div class="redes">
-          <a href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener" aria-label="WhatsApp do Rancho Canaã">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.19.87 2.35.99 2.51.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener" aria-label="Instagram do Rancho Canaã">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener" aria-label="Rancho Canaã no Google Maps">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
-          </a>
+    <div class="dia" data-dia>
+      <div class="dia__texto">
+        <p class="olho">Um dia no rancho</p>
+        <h3>Arraste o sol e veja <em>o dia passar</em>.</h3>
+        <p>Da manhã com o gramado só pra vocês até o céu de estrelas em cima do chalé. Fotos reais do rancho, em cada hora do dia.</p>
+        <p class="dia__dica"><i aria-hidden="true"></i>Arraste o sol pela linha</p>
+      </div>
+      <div>
+        <div class="dia__palco">
+          <img src="assets/img/gramado-piscina.webp" width="1200" height="551" alt="Gramado, piscina e serra numa manhã de céu azul" loading="lazy" decoding="async">
+          <img src="assets/img/piscina.webp" width="640" height="673" alt="Piscina com cascata à tarde" loading="lazy" decoding="async">
+          <img src="assets/img/pergolado-por-do-sol.webp" width="1200" height="774" alt="Pôr do sol visto do pergolado" loading="lazy" decoding="async">
+          <img src="assets/img/rancho/chale-noite.webp" width="846" height="681" alt="Chalé iluminado sob um céu estrelado" loading="lazy" decoding="async">
+          <div class="dia__tom"></div>
+          <p class="dia__legenda" aria-live="polite"><strong>Manhã</strong>O gramado só pra vocês e a serra limpa no horizonte.</p>
+        </div>
+        <div class="dia__controle">
+          <svg class="dia__arco" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M22 66 Q300 -40 578 66"/>
+            <path class="feito" d="M22 66 Q300 -40 578 66" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          </svg>
+          <span class="dia__astro" aria-hidden="true"></span>
+          <input class="dia__range" type="range" min="0" max="300" value="0" step="1" aria-label="Hora do dia: manhã, tarde, pôr do sol e noite">
+          <div class="dia__horas" aria-hidden="true"><span class="is-agora">Manhã</span><span>Tarde</span><span>Pôr do sol</span><span>Noite</span></div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <h3>Falar com a gente</h3>
-        <ul class="contatos">
-          <li>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
-            <span>
-              <a href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener">(31) 99135-1079</a>
-              <small>WhatsApp — reservas e dúvidas</small>
-            </span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
-            <span>
-              <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a>
-              <small>Fotos novas e datas livres</small>
-            </span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
-            <span>
-              <a href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">Como chegar</a>
-              <small>Itabira — MG · abre a rota no Google Maps</small>
-            </span>
-          </li>
+    <p style="margin-top:2.6rem;text-align:center">
+      <a class="btn btn--escuro" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20reservar%20um%20fim%20de%20semana." target="_blank" rel="noopener"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>Consultar um fim de semana</a>
+    </p>
+  </div>
+</section>
+
+<section class="secao" id="ensaios">
+  <div class="wrap ensaios__grade">
+    <div class="ensaios__arte">
+      <div class="selo" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="circulo" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><text><textPath href="#circulo">Luz dourada · todo fim de tarde · </textPath></text></svg>
+        <b>✦</b>
+      </div>
+      <div class="ensaios__grande">
+        <div class="camada" data-parallax="0.06"><img src="assets/img/rancho/balanco-pergolado.webp" width="900" height="1125" alt="Casal no balanço de madeira do pergolado, com o sol se pondo atrás" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="ensaios__pequena" data-parallax="-0.1"><img src="assets/img/rancho/ensaio-moto.webp" width="1000" height="1250" alt="Casal de jaqueta de couro numa moto, no gramado com a serra ao fundo" loading="lazy" decoding="async"></div>
+    </div>
+    <div>
+      <p class="olho">Ensaios fotográficos</p>
+      <h2>O cenário que os <em>fotógrafos</em> escolhem.</h2>
+      <p style="margin-top:1.1rem;color:var(--texto-suave);font-size:1.06rem">Casais, gestantes, noivas e famílias vêm fotografar aqui. O balanço no pergolado, a escada de madeira e o contraluz do fim de tarde já viraram assinatura no feed dos fotógrafos da região.</p>
+      <ul class="cantos">
+        <li><span>01</span>O balanço de madeira no gramado</li>
+        <li><span>02</span>A escada e as janelas do chalé</li>
+        <li><span>03</span>A varanda com a serra ao fundo</li>
+        <li><span>04</span>O contraluz dourado do fim de tarde</li>
+      </ul>
+      <div class="parceiros">
+        <p>Já fotografaram aqui</p>
+        <ul>
+          <li><a href="https://www.instagram.com/vitorestevaofoto/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>Vitor Estevão</a></li>
+          <li><a href="https://www.instagram.com/ingridcatarino_ph/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>Ingrid Catarino</a></li>
+          <li><a href="https://www.instagram.com/rgstudiofotografia/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>RG Studio</a></li>
+          <li><a href="https://www.instagram.com/clebermb93/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>Cleber Moura</a></li>
         </ul>
       </div>
-
-      <div>
-        <h3>Onde fica</h3>
-        <div class="mapa">
-          <iframe
-            src="https://www.google.com/maps?q=-19.6794164,-43.3338004(Rancho+Cana%C3%A3)&z=15&output=embed"
-            title="Mapa com a localização do Rancho Canaã em Itabira, MG"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <a class="btn btn--claro mapa__ir" href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.2-8 12-8 12s-8-6.8-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.3" r="2.9"/></svg>
-          Abrir no Google Maps
-        </a>
+      <div class="ensaios__acoes">
+        <a class="btn btn--escuro" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20agendar%20um%20ensaio%20fotogr%C3%A1fico." target="_blank" rel="noopener"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>Agendar um ensaio</a>
       </div>
+    </div>
+  </div>
+</section>
 
+<section class="sol">
+  <div class="sol__fundo" data-parallax="0.16">
+    <picture>
+      <source media="(max-width: 699px)" srcset="assets/img/rancho/sol-m.webp" width="1100" height="1466">
+      <img src="assets/img/rancho/sol-silhueta.webp" width="1279" height="960" alt="Silhueta de um casal contra o sol se pondo atrás da serra" loading="lazy" decoding="async">
+    </picture>
+  </div>
+  <div class="wrap">
+    <p class="olho">Pôr do sol</p>
+    <h2>Todo dia tem um. <em>E ele é sempre a melhor parte.</em></h2>
+    <p>O rancho fica no alto, virado pro horizonte, sem prédio nem morro na frente. No fim da tarde, todo mundo para o que está fazendo e vai olhar.</p>
+  </div>
+</section>
+
+<section class="secao secao--creme" id="galeria">
+  <div class="wrap">
+    <div class="cabeca cabeca--centro">
+      <p class="olho">Galeria</p>
+      <h2>Tudo isso <em>aconteceu aqui</em>.</h2>
+      <p>Casamentos, making of, ensaios e o próprio rancho. Toque numa foto pra ver em tamanho grande.</p>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtrar fotos">
+      <button class="filtro" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+      <button class="filtro" type="button" data-filtro="cas" aria-pressed="false">Casamentos</button>
+      <button class="filtro" type="button" data-filtro="mak" aria-pressed="false">Making of</button>
+      <button class="filtro" type="button" data-filtro="ens" aria-pressed="false">Ensaios</button>
+      <button class="filtro" type="button" data-filtro="ran" aria-pressed="false">O rancho</button>
+    </div>
+    <div class="mosaico" id="mosaico">
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-ceu.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-ceu-p.webp" width="640" height="800" alt="Noivos de mãos dadas olhando pro céu" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-balanco.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-balanco-p.webp" width="640" height="800" alt="Casal no balanço na luz dourada" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-vestido.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-vestido-p.webp" width="640" height="800" alt="Vestido de noiva pendurado na porta da varanda" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/aerea-1920.webp" data-credito="Rancho Canaã"><img src="assets/img/aerea-por-do-sol.webp" width="1400" height="1044" alt="Vista aérea do rancho ao pôr do sol" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-panorama.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-panorama-p.webp" width="640" height="400" alt="Cerimônia no gramado com celebrante, noivos e convidados" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-pre1.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-pre1-p.webp" width="640" height="853" alt="Pré-wedding sob o pergolado de madeira" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-escada.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-escada-p.webp" width="640" height="800" alt="Noiva na escada de madeira do chalé" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/rancho/chale-noite.webp" data-credito="Rancho Canaã"><img src="assets/img/galeria/ran-noite-p.webp" width="640" height="515" alt="Chalé iluminado sob o céu estrelado" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-buque.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-buque-p.webp" width="640" height="800" alt="Noiva levantando o buquê na saída da cerimônia" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-contraluz.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-contraluz-p.webp" width="640" height="800" alt="Casal no contraluz do pôr do sol" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-silhueta.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-silhueta-p.webp" width="640" height="800" alt="Silhueta da noiva na porta da varanda, em preto e branco" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/sala.webp" data-credito="Rancho Canaã"><img src="assets/img/sala.webp" width="1400" height="932" alt="Sala do chalé com escada de madeira" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-chale.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-chale-p.webp" width="640" height="800" alt="Noivos caminhando no gramado em frente ao chalé" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-moto.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-moto-p.webp" width="640" height="800" alt="Casal numa moto clássica no gramado" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-sorriso.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-sorriso-p.webp" width="640" height="800" alt="Noiva sorrindo durante o making of" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/piscina.webp" data-credito="Rancho Canaã"><img src="assets/img/piscina.webp" width="640" height="673" alt="Piscina com cascata e deck de pedra" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-entrada.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-entrada-p.webp" width="640" height="800" alt="Noivos entrando entre os convidados" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-sol.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-sol-p.webp" width="640" height="853" alt="Casal com o cachorro no gramado ao pôr do sol" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-panorama.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-panorama-p.webp" width="640" height="400" alt="Noiva no quarto de madeira com o véu pelo chão" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/pergolado-por-do-sol.webp" data-credito="Rancho Canaã"><img src="assets/img/pergolado-por-do-sol.webp" width="1200" height="774" alt="Sol se pondo entre os caibros do pergolado" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="cas" data-full="assets/img/galeria/cas-mao.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/cas-mao-p.webp" width="640" height="800" alt="Noivo beija a mão da noiva diante dos convidados" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-pergolado.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-pergolado-p.webp" width="640" height="800" alt="Casal no balanço do pergolado com céu de fim de tarde" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-parede.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-parede-p.webp" width="640" height="800" alt="Noiva ao lado do vestido pendurado na parede de madeira" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/quarto.webp" data-credito="Rancho Canaã"><img src="assets/img/quarto.webp" width="859" height="1130" alt="Quarto de madeira com cama de casal" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-salto.webp" data-credito="Foto: RG Studio Fotografia"><img src="assets/img/galeria/ens-salto-p.webp" width="640" height="800" alt="Casal comemorando no gramado sob céu de nuvens carregadas" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-porta.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-porta-p.webp" width="640" height="800" alt="Noiva com o buquê na porta do chalé" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/deck-espreguicadeiras.webp" data-credito="Rancho Canaã"><img src="assets/img/deck-espreguicadeiras.webp" width="640" height="800" alt="Espreguiçadeiras no deck ao pôr do sol" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-familia.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-familia-p.webp" width="640" height="800" alt="Família com a moto em frente ao chalé" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-oracao.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-oracao-p.webp" width="640" height="800" alt="Noiva de olhos fechados segurando o terço" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/fachada.webp" data-credito="Rancho Canaã"><img src="assets/img/fachada.webp" width="1200" height="551" alt="Fachada do chalé com o jipe na garagem" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-pre2.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-pre2-p.webp" width="640" height="853" alt="Pré-wedding entre as plantas do jardim" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-vestido2.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-vestido2-p.webp" width="640" height="800" alt="Noiva sorrindo ao lado do vestido" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ran" data-full="assets/img/gramado-piscina.webp" data-credito="Rancho Canaã"><img src="assets/img/gramado-piscina.webp" width="1200" height="551" alt="Panorâmica do gramado com a piscina e a serra" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-sala.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-sala-p.webp" width="640" height="853" alt="Casal sentado no tapete da sala do chalé" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="mak" data-full="assets/img/galeria/mak-riso.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/mak-riso-p.webp" width="640" height="800" alt="Noiva rindo, de roupão, no quarto de madeira" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-moto2.webp" data-credito="Foto: Vitor Estevão Fotografia"><img src="assets/img/galeria/ens-moto2-p.webp" width="640" height="800" alt="Mulher sentada na moto no gramado" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-pre3.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-pre3-p.webp" width="640" height="853" alt="Casal abraçado sob o pergolado" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-sol2.webp" data-credito="Foto: Ingrid Catarino"><img src="assets/img/galeria/ens-sol2-p.webp" width="640" height="853" alt="Casal de testas encostadas na luz do fim de tarde" loading="lazy" decoding="async"></button>
+      <button class="mosaico__item" type="button" data-cat="ens" data-full="assets/img/galeria/ens-gestante.webp" data-credito="Rancho Canaã"><img src="assets/img/galeria/ens-gestante-p.webp" width="640" height="480" alt="Silhueta de casal à espera do bebê contra o pôr do sol" loading="lazy" decoding="async"></button>
+    </div>
+    <p class="galeria__rodape">Mais fotos no Instagram: <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">@ranchocanaaitabira</a></p>
+  </div>
+</section>
+
+<section class="secao" id="avaliacoes">
+  <div class="wrap">
+    <div class="placar">
+      <p class="placar__nota">4,9<span class="estrelas" aria-hidden="true">★★★★★</span><small>29 avaliações no Google</small></p>
+      <div class="cabeca" style="margin:0">
+        <p class="olho">Avaliações</p>
+        <h2>Quem já veio <em>conta a mesma história</em>.</h2>
+        <p>Vista, silêncio, o aconchego da casa de madeira e donos atenciosos: é o que mais aparece nas avaliações.</p>
+      </div>
+    </div>
+    <div class="depoimentos">
+      <figure class="depo">
+        <blockquote>Chalé com ótima infraestrutura, ambiente aconchegante e extremamente tranquilo. Ideal para descansar, ter contato com a natureza e recarregar as energias.</blockquote>
+        <figcaption>Alexandre F.<span>Avaliação no Google · 5 estrelas</span></figcaption>
+      </figure>
+      <figure class="depo">
+        <blockquote>Perfeito para quem quer descansar. Além de lindo, é aconchegante e traz uma verdadeira sensação de paz.</blockquote>
+        <figcaption>Júlia R.<span>Avaliação no Google · 5 estrelas</span></figcaption>
+      </figure>
+      <figure class="depo">
+        <blockquote>Que lugar maravilhoso. Proprietários super educados e atenciosos. Hiper recomendo.</blockquote>
+        <figcaption>Nélio A.<span>Avaliação no Google · 5 estrelas</span></figcaption>
+      </figure>
+    </div>
+    <p class="avaliacoes__mais"><a class="btn btn--linha" href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">Ver todas no Google</a></p>
+  </div>
+</section>
+
+<section class="secao secao--noite reservar" id="reservar">
+  <div class="reservar__fundo" data-parallax="0.1"><img src="assets/img/rancho/chale-noite.webp" width="846" height="681" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap reservar__grade">
+    <div class="reservar__lado">
+      <p class="olho">Reservas</p>
+      <h2>Monte seu pedido e <em>mande no WhatsApp</em>.</h2>
+      <p>Escolha o que você quer fazer, a data e quantas pessoas. A mensagem já vai pronta pro rancho, é só enviar.</p>
+      <div class="contato-direto">
+        <a href="https://wa.me/5531991351079" target="_blank" rel="noopener"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>(31) 99135-1079</a>
+        <a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>@ranchocanaaitabira</a>
+      </div>
+      <p class="aviso-data">Feriados e datas de casamento são as primeiras a fechar. Se a data importa, vale perguntar com antecedência.</p>
     </div>
 
+    <form class="pedido" id="pedido" action="https://wa.me/5531991351079" method="get" target="_blank">
+      <fieldset>
+        <legend>O que você quer fazer?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="tipo" value="Casamento"><span>Casamento</span></label>
+          <label class="chip"><input type="radio" name="tipo" value="Festa ou aniversário"><span>Festa ou aniversário</span></label>
+          <label class="chip"><input type="radio" name="tipo" value="Fim de semana"><span>Fim de semana</span></label>
+          <label class="chip"><input type="radio" name="tipo" value="Ensaio fotográfico"><span>Ensaio fotográfico</span></label>
+        </div>
+      </fieldset>
+      <div class="campos">
+        <div class="campo">
+          <label class="rotulo" for="quando">Pra quando?</label>
+          <select id="quando" name="quando">
+            <option value="">Ainda não sei</option>
+            <option>novembro de 2026</option>
+            <option>dezembro de 2026</option>
+            <option>janeiro de 2027</option>
+            <option>fevereiro de 2027</option>
+            <option>março de 2027</option>
+            <option>abril de 2027</option>
+            <option>maio de 2027</option>
+            <option>junho de 2027</option>
+            <option>julho de 2027</option>
+            <option>agosto de 2027</option>
+            <option>setembro de 2027</option>
+            <option>outubro de 2027</option>
+            <option>novembro de 2027</option>
+            <option>dezembro de 2027</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="pessoas">Quantas pessoas?</label>
+          <input id="pessoas" name="pessoas" type="number" inputmode="numeric" min="1" max="999" placeholder="ex.: 40">
+        </div>
+      </div>
+      <button class="btn btn--sol" type="submit"><svg class="ico ico--cheio" aria-hidden="true"><use href="#i-zap"/></svg>Enviar pelo WhatsApp</button>
+      <p class="pedido__nota">Abre o WhatsApp com a mensagem pronta. Nada é enviado sem você tocar em enviar.</p>
+    </form>
+  </div>
+</section>
+
+<section class="secao secao--creme" id="onde">
+  <div class="wrap onde">
+    <div>
+      <p class="olho">Onde fica</p>
+      <h2>Em Canaã, <em>distrito de Itabira</em>.</h2>
+      <ul>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Rancho Canaã</strong><br>Canaã, Itabira/MG, 35935-000</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-poente"/></svg><span>Na parte alta, virado pro horizonte da serra</span></li>
+      </ul>
+      <div class="onde__acoes">
+        <a class="btn btn--escuro" href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Abrir no Google Maps</a>
+        <a class="btn btn--linha" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20saber%20como%20chegar." target="_blank" rel="noopener">Pedir o caminho</a>
+      </div>
+    </div>
+    <div class="onde__mapa">
+      <iframe src="https://maps.google.com/maps?q=-19.6794164,-43.3338004&amp;z=17&amp;t=k&amp;output=embed" title="Mapa com a localização do Rancho Canaã em Itabira" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape__grade">
+      <div>
+        <a class="marca" href="#inicio" aria-label="Rancho Canaã, voltar ao início"><svg aria-hidden="true"><use href="#marca"/></svg><span>Rancho Canaã<small>Itabira · MG</small></span></a>
+        <p class="rodape__lema">Seu pedaço de paraíso em Itabira.</p>
+      </div>
+      <div>
+        <h4>O rancho</h4>
+        <ul>
+          <li><a href="#casamentos">Casamentos e eventos</a></li>
+          <li><a href="#fim-de-semana">Fim de semana</a></li>
+          <li><a href="#ensaios">Ensaios fotográficos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5531991351079" target="_blank" rel="noopener">WhatsApp (31) 99135-1079</a></li>
+          <li><a href="https://www.instagram.com/ranchocanaaitabira/" target="_blank" rel="noopener">Instagram @ranchocanaaitabira</a></li>
+          <li><a href="https://maps.app.goo.gl/bA156pDa6FVkgKFC7" target="_blank" rel="noopener">Como chegar</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="rodape__base">
-      <span>© 2026 Rancho Canaã Itabira. Todos os direitos reservados.</span>
-      <span>4,9 ★ em 29 avaliações no Google</span>
+      <span>© 2026 Rancho Canaã Itabira</span>
+      <span>Fotos de casamento e ensaio: fotógrafos parceiros, creditados em cada imagem.</span>
     </div>
+    <p class="assinatura">Desenvolvido por <a href="https://marcel0gs.github.io/marcelo-ribeiro-digital/" target="_blank" rel="noopener">Marcelo Ribeiro</a></p>
   </div>
 </footer>
 
-<a class="zap" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.19.87 2.35.99 2.51.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-  <span>WhatsApp</span>
-</a>
+<a class="zap" href="https://wa.me/5531991351079?text=Oi!%20Vi%20o%20site%20do%20Rancho%20Cana%C3%A3%20e%20queria%20consultar%20as%20datas%20dispon%C3%ADveis." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#i-zap"/></svg></a>
 
+<dialog class="caixa" id="caixa" aria-label="Foto ampliada">
+  <div class="caixa__palco"><img alt=""></div>
+  <div class="caixa__rodape"><span class="caixa__credito"></span><span class="caixa__conta"></span></div>
+  <button class="caixa__btn caixa__fechar" type="button" aria-label="Fechar"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="caixa__btn caixa__ant" type="button" aria-label="Foto anterior"><svg class="ico" aria-hidden="true"><use href="#i-esq"/></svg></button>
+  <button class="caixa__btn caixa__prox" type="button" aria-label="Próxima foto"><svg class="ico" aria-hidden="true"><use href="#i-dir"/></svg></button>
+</dialog>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
